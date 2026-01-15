@@ -1,0 +1,449 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<title>CSE214 Homework 5</title>
+</head>
+
+<body bgcolor="#FFFFFF" style="margin:3em">
+
+<h2 align="center"><img border="0" src="http://www.cs.sunysb.edu/~cse214/images/logo.gif" width="200" height="100">&nbsp; 
+<font color="#800080"><br>
+</font><font color="#800000" face="Arial">HOMEWORK - SPRING 2023</font></h2>
+
+<hr>
+
+
+<h3><font face="Arial"><strong>HOMEWORK 5 - Monday, May 22<sup>nd</sup>                      
+ before 7PM (China time)<br></strong></h3>
+ 
+<p><font face="Arial"><strong>REMINDERS: 
+<ul>
+    <li>Be sure your code follows the <a href="http://www.cs.sunysb.edu/~cse214/codingstyle.htm" >coding
+    style</a> for CSE214. </li>
+
+    <li style="color:red">Make sure you read the warnings about <a href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm" >academic
+    dishonesty</a>. <i>Remember, all work you submit for homework or exams MUST be your own work.</i> </li>
+
+    <li><!--Click <a href="http://www.cs.sunysb.edu/~cse214/handin.htm" >here</a> to 
+    read through the steps to make sure you hand in your homework successfully.  
+ 
+    Also, -->Login to your <a href="http://facdev04.cs.stonybrook.edu:8080/grade.Login" >grading account</a> and click &quot;Submit Assignment&quot; to upload and submit your assignment. <!--Make sure that you submit the same files on both systems. -->
+    </li>
+
+ <li><span style="color:green">
+ You may use any predefined Java Development Kit (JDK) data structure classes such as ArrayList, Vector, or LinkedList or Queue. 
+ <span></li>
+
+   
+    <li>You may use Scanner, InputStreamReader, or any other class that you wish for keyboard input or reading a text file.</li>
+</ul>
+	 </strong></font></p>
+<p><b>Nowadays, social networking is all the rage.  Being able to stay in contact with friends of old and making new friends have become easier than ever.  We will modify this idea and implement a simple location-based mobile social network.  Each profile will have a preferred network distance and their current location which we will use to determine a particular profile's social network at their current location.  You will use a hash table to 
+store the data records (name, location, and preferred size).  The program will enable the insertion and removal of user profiles, and the ability to search for and display a specific profile, or to calculate a user's local social network.  To simplify things, you will use the <font face="Courier New">Hashtable</font> class defined in the Java API for your hash table.</b></p>
+
+<hr>
+
+  <p><b>The following <font face="Courier New">Hashtable</font> methods will be relevant to your assignment (see the Java 
+  API for complete info and other methods):</b></p>
+<ul>
+  <li><font face="Courier New">public Hashtable(int size, float load)</font><br>
+  Creates a hash table with initial capacity of <font face="Courier New">size</font> 
+  and a load factor of <font face="Courier New">load</font>. The load factor is 
+  typically between 0 and 1.<br>
+  (The table is resized automatically if the number of elements in the table exceeds
+  <font face="Courier New">size*load</font>.)</li>
+<li>
+  <font face="Courier New">public Object get(Object key)</font><br>
+  Returns the data record that corresponds to the key in the hash table.</li>
+<li>
+  <font face="Courier New">public Object put(Object key, Object record) throws 
+  NullPointerException</font><br>
+  Inserts the data record into the hash table using the given key. The key 
+  cannot be null.</li>
+<li>
+  <font face="Courier New">public Object remove(Object key)</font><br>
+  Removes the data record from the hash table corresponding to the given key.</li>
+
+</ul>
+  <p><b>The <font face="Courier New">key</font> object must implement the method
+  <font face="Courier New">equals</font> in order for these methods to work 
+  correctly.&nbsp; Also, the key object must implement the
+  <font face="Courier New">hashCode</font> method so keys can be mapped to 
+  locations in the hash table.</p>
+
+  <p><b><i>Note: The methods <font face="Courier New">equals</font> and 
+      <font face="Courier New">hashCode</font> are already defined for all standard classes 
+	  including the String class, and since a String (profile name) will be 
+      as the <font face="Courier New">key</font> object in this assignment,  you are not required 
+	  to implement these methods.</i>
+	 </b>
+  </p>	 
+
+<hr>
+
+<p><b>Normally when a program ends, the data stored in the table would be lost. For this assignment, you will 
+implement the concept of data persistence, where data can &quot;live&quot; from one 
+program run to the next. In Java, we can implement persistence by using the
+<font face="Courier New">Serializable</font> interface as defined in the Java 
+API. This interface allows you to save the contents of an object into a file in 
+a special format that can be read in when the program is executed again to 
+rebuild the object as it existed when it was saved. </b></p>                   
+
+<blockquote>
+ 
+
+  <p><b><i>Example</i>: You have a <font face="Courier New">BSTree</font> class which will be used to represent the binary search tree storing the program's knowledge. In order to be able to use this same BSTree the next time the program is executed, you would do the following:</b></p>
+
+  <ol>
+
+    <li><b>Modify the <font face="Courier New">BSTree</font> object so that it 
+
+    implements the <font face="Courier New">Serializable</font> interface. No 
+
+    other changes are necessary.<br>
+
+    <br>
+
+    <font face="Courier New">public class BSTree implements Serializable<br>
+
+    {<br>
+
+&nbsp;&nbsp; // Member methods as is<br>
+
+    }</font><br>
+
+&nbsp;</b></li>
+
+    <li><b>In your application that contains the tree, you can include code that 
+
+    will save the tree into a file so it can be read in again later. To do this, 
+
+    you need to create an <font face="Courier New">ObjectOutputStream</font> to 
+
+    send the data to, and then use the <font face="Courier New">writeObject</font> 
+
+    method to send the student to the stream, which is stored in the specified 
+
+    file.<br>
+
+    <br>
+
+    <font face="Courier New">FileOutputStream file = new 
+
+    FileOutputStream(&quot;tree.obj&quot;);<br>
+
+    ObjectOutputStream outStream = new ObjectOutputStream(file);<br>
+
+    BSTree tree = new BSTree(/*Constructor Parameters*/);<br>
+
+    <br>
+
+    // missing code here sets up the tree in some way<br>
+
+    <br>
+
+    // the following line will save the object in the file<br>
+
+    outStream.writeObject(tree); <br>
+
+&nbsp;</font></b></li>
+
+    <li><b>When the same application (or another application) runs again, you can initialize the member using the serialized data saved from step 
+
+    2 so you don't have to recreate the object from scratch. To do this, you 
+
+    need to create an <font face="Courier New">ObjectInputStream</font> to read 
+
+    the data from, and then use the <font face="Courier New">readObject </font>
+
+    method to read the tree from the stream.<br>
+
+    <br>
+
+    <font face="Courier New">FileInputStream file = new 
+
+    FileInputStream(&quot;tree.obj&quot;);<br>
+
+    ObjectInputStream inStream = new ObjectInputStream(file);<br>
+
+    BSTree tree;<br>
+
+    <br>
+
+    tree = (BSTree) inStream.readObject();<br>
+
+    <br>
+
+    // missing code here can use the same tree from step 2 now</font></b></li>
+
+  </ol>
+
+  <p><b>If an object has a reference to another object in it, then the 
+
+  referenced object is also saved during serialization, as long as that object 
+
+  type implements the <font face="Courier New">Serializable</font> interface. 
+
+  For example, each <font face="Courier New">BSTree</font> instance has a 
+
+  reference to another object, a <font face="Courier New">BSTNode</font> 
+
+  representing each of the tree's nodes.</b></p>
+
+
+
+  <p><b>Serialization does not store the object data as text. It stores the 
+
+  object data in the file in a binary format so that it can be reconstructed 
+
+  when it is read in later.</b></p>
+
+
+
+  <p><b><font color = "red">One of the most appealing features of serialization is the fact that serializing an object that contains other objects, as long as they implement the Serializable interface, will serialize all of those objects and not just the outer object.  Thus, if you serialize a data structure such as an IntList and all of your classes implement Serializable, there is no need to copy each IntNode one at a time!  Simply write the IntList object to the output file once and you are finished.  You may also use serialization as an alternative to deep cloning by implementing every class as Serializable and writing the object to a file only to read from the file and into another variable immediately.  This works because serialization re-creates objects recursively from the smaller ones that they contain, effectively making an entirely new object each time that the file is read.</font></b></p></blockquote>
+
+<hr> 
+<p><b>
+1. Write a Profile class that stores the three fields for each  
+person:</b></p>
+
+<ul>
+<li>
+private String fullName<br>
+A lowercase String of the person's full name, separated by a single space.  Whichever order of first and last names you prefer can be used, so long as you handle it consistently.  Since the name will be used as the key in our Hashtable, we keep the assignment simple by using a single String.
+</li>
+<li>
+private Point location<br>
+A Java Point object representing the x and y coordinates of the person's current location.  Both the x and y coordinate must be between -100 and 100 inclusive.  This number should not be hard coded, rather it should be stored as a final variable (constant) in the Profile class.
+</li>
+<li>
+private int networkRange<br>
+The preferred radial distance of the person's mobile social network, an integer of at least size 1.
+</li>
+</ul>
+
+<p><b>
+The class should have the usual accessors and mutators. Throw an exception to the calling method if any invalid data is attempted to be stored.</b></p>
+
+<p><b>
+2. Write a MobileNetwork class that uses a hash table to store names and associated 
+information into a hash table for easy lookup. Remember, you must use the Java API
+<font face="Courier New">Hashtable</font> class for your hash table.</b></p>
+<p><b>When the program begins, it should see if the file &quot;network.obj&quot; exists 
+in the current directory. If so, it should initialize the hash table with the 
+data in this file using serialization. Otherwise, your program will start with 
+an empty hash table. Then, the program should provide the user with a menu with 
+the following options.</b></p>
+<blockquote>
+<p><b>I - Insert a new user profile into the table.</b></p>
+  <blockquote>
+<p><b>If the user chooses this option, prompt the user for a name, location, and preferred network range on separate lines.  Prompt for the first and last names separately, yet store them as a single lowercase String as you implemented in your Profile class.  If the entry is valid, insert the record into your hash table using the name as the key. Otherwise, output an error message and ignore the entry. Also, if a duplicate name is inserted, ignore the record and output an error to the user and continue running the program.</b></p>
+  </blockquote>
+<p><b>D - Delete a user profile from the table.</b></p>
+  <blockquote>
+<p><b>If the user chooses this option, prompt the user for a profile name, as separate first and last names.<br>
+If you can't find the name in the hash table, then output that the name is not 
+in the table. Otherwise, remove the profile from the table. (Ignore the case of 
+the letters when searching for a match.)</b></p>
+  </blockquote>
+<p><b>U - Update the information for a given profile in the table.</b></p>
+  <blockquote>
+<p><b>With this option, prompt the user for a profile name, as separate first and last names.<br>
+If you can't find the name in the hash table, then output that the name is not 
+in the table. Otherwise, prompt the user for a set of new x and y coordinates and network range, and update the table to use this new information. (Ignore the case of the letters when searching for a match.)</b></p>
+  </blockquote>
+<!-- **I don't see this being necessary.**
+<p><b>S - Search for the location for a given profile in the table.</b></p>
+  <blockquote>
+<p><b>If the user chooses this option, prompt the user for a profile name, as separate first and last names.<br>
+If you can't find the name in the hash table, then output that the name is not 
+in the table. Otherwise, output the coordinate location for the given profile. (Ignore the 
+case of the letters when searching for a match.)</b></p>
+  </blockquote>
+-->
+<p><b>S - Search to see if two users are within each other's mobile social network.</b></p>
+  <blockquote>
+<p><b>If the user chooses this option, prompt the user for two profile names, both as separate first and last names.<br>
+If you can't find a name in the hash table, then output the name(s) that could not be found. Otherwise, indicate whether or not both users are mutually within each other's social network.  If just one user is within the other's range, then consider them to not be networked. (Ignore the 
+case of the letters when searching for a match.)</b></p>
+<p><b>Simple Pythagorean geometry is used to determine the actual distance.  The necessary method is already provided for you within the Point class.  As an example:</b></p>
+<pre>
+Point p1 = new Point(5, 100);
+Point p2 = new Point(8, -50);
+int distance = (int)p1.distance(p2);
+</pre>
+<p><b>Comparing this actual distance to the two preferred distances, we consider the users to be within each other's social network if the actual distance is the lesser of all three.  Take a look at the <a href=http://java.sun.com/j2se/1.5.0/docs/api/java/awt/Point.html>Java API Documentation for the Point class</a>, as there are some other methods that will be very helpful.</p></b>
+  </blockquote>
+<!--Since this is a Hashtable, it wouldn't be sensical to iterate through all entries.  This way, we still can utilize the locality of the social network, but we have to specify which two users are together.-->
+
+<p><b>Q - Quit the program</b></p>
+  <blockquote>
+<p><b>If the user chooses this option, the current hash table should be saved to 
+a file using serialization in the file &quot;network.obj&quot;, and then the program 
+will terminate.</b></p>
+  </blockquote>
+
+<p><b><font color=red>OPTIONAL - EXTRA CREDIT</font></b></p>
+<!-- Dont know how many points to value. -->
+<p><b><font color=red>P - Print out a user's social network</font></b></p>
+  <blockquote>
+<p><b>This option prompts the user for a profile name, and lists all users within range.<br>
+You will need to modify the program so that it tracks which users are within each other's range.  When a user is added or removed from the table, or when a user's information is updated, it will need to calculate which users that are inside of his or her mobile network.  In addition to the Hashtable, you will have to store the users in a data structure such as a linked list or other Java API class, that you can easily iterate through.  You can update the user Profile class to include it's own data structure, that maintains a list of Strings of the names of those in his or her network.  Doing it this way means the calculation need not be done at every printout, just on when the table is modified.
+
+<font color=Fuchsia >After a new profile is inserted into the table or information for a given profile is updated, this option <b><u>must</u></b> be used to display all users within range. </font>
+</b></p>
+
+  </blockquote>
+</blockquote>
+<p><b>3. In the documentation for your Profile class, answer the following 
+questions clearly:</b></p>
+
+<blockquote>
+<p><b>(a) How much bigger is the table made when it is automatically resized?</b></p>
+
+<p><b>(b) How are collisions handled in the <font face="Courier New">Hashtable</font> 
+class?</b></p>
+
+<p><b>(c) Briefly explain
+the advantages of serialization and reading from a binary file as compared to
+reading from a text file.</b></p>
+</blockquote>
+
+<p><b>Exceptions must be handled properly and the program must continue running properly.  You can create your own Exceptions or use the appropriate Java Exception classes.  User-created Exceptions must be included in submissions.</b></p>
+
+
+<p><b><u>INPUT FORMAT</u></b></p>
+<ul><b>
+<li>The menu options and profile names are case insensitive.</li>
+<li>You must check to see that given inputs are within valid ranges, and stay consistent in how you store the user's full name.</li>
+</b>
+</ul>
+
+</p></b>
+<p><b><u>OUTPUT FORMAT</u></b></p>
+<ul>
+<li><b>Be sure your output is easy to read and understand. Use additional blank lines to properly group your program's output so it is clean and sensible.  Do not output debugging or other additional information - this slows down user execution of the code and makes a program less user friendly.</b></li>
+</ul>
+
+<P><STRONG><U>SAMPLE INPUT/OUTPUT</U><BR></STRONG>
+Program output is in <FONT 
+color=blue>blue</FONT>. Comments are in <FONT color=green>green</FONT>. User 
+input is in black.</P>
+
+<PRE><FONT color=blue>
+I) Insert a new user profile into the table.
+D) Delete a user profile from the table.
+U) Update the information for a given profile in the table.
+S) Search to see if two users are within each other's mobile social network.
+Q) Quit Program
+<FONT color=green>//Display menu after every complete menu operation</FONT>
+
+Enter your choice: <FONT color=black>I</FONT>
+Enter the First Name: <FONT color=black>JONATHAN</FONT> <FONT color=green>//Case does not matter</FONT>
+Enter the Last Name: <FONT color=black>SCHWARTZ</FONT>
+Enter a coordinate pair [x y]: <FONT color=black>10 -10</FONT>
+Enter the preferred network range: <FONT color=black>30</FONT>
+
+Enter your choice: <FONT color=black>i</FONT>
+Enter the First Name: <FONT color=black>James</FONT>
+Enter the Last Name: <FONT color=black>Gosling</FONT>
+Enter a coordinate pair [x y]: <FONT color=black>-101 0</FONT>
+Enter the preferred network range: <FONT color=black>30</FONT>
+
+Error:  User coordinates not valid, entry ignored.
+
+Enter your choice: <FONT color=black>I</FONT>
+Enter the First Name: <FONT color=black>Mike</FONT>
+Enter the Last Name: <FONT color=black>Sheridan</FONT>
+Enter a coordinate pair [x y]: <FONT color=black>25 25</FONT>
+Enter the preferred network range: <FONT color=black>5</FONT>
+
+Enter your choice: <FONT color=black>i</FONT>
+Enter the First Name: <FONT color=black>James</FONT>
+Enter the Last Name: <FONT color=black>Gosling</FONT>
+Enter a coordinate pair [x y]: <FONT color=black>-100 0</FONT>
+Enter the preferred network range: <FONT color=black>30</FONT>
+
+Enter your choice: <FONT color=black>D</FONT>
+Enter the First Name: <FONT color=black>mike</FONT>
+Enter the Last Name: <FONT color=black>sheridan</FONT>
+
+Mike Sheridan has been removed from the table.
+<FONT color=green>//Optional to properly capitalize names in messages</FONT>
+
+Enter your choice: <FONT color=black>d</FONT>
+Enter the First Name: <FONT color=black>Scott</FONT>
+Enter the Last Name: <FONT color=black>McNealy</FONT>
+
+Scott McNealy not found in table!
+
+Enter your choice: <FONT color=black>U</FONT>
+Enter the First Name: <FONT color=black>James</FONT>
+Enter the Last Name: <FONT color=black>Gosling</FONT>
+
+Updating information for James Gosling:
+Enter a new coordinate pair [x y]: <FONT color=black>5 -5</FONT>
+Enter the new preferred network range: <FONT color=black>10</FONT>
+
+Enter your choice: <FONT color=black>S</FONT>
+Enter person one's First Name: <FONT color=black>James</FONT>
+Enter person one's Last Name: <FONT color=black>Gosling</FONT>
+Enter person two's First Name: <FONT color=black>Jonathan</FONT>
+Enter person two's Last Name: <FONT color=black>Schwartz</FONT>
+
+James Gosling and Jonathan Schwartz are in each other's social network.
+
+Enter your choice: <FONT color=black>U</FONT>
+Enter the First Name: <FONT color=black>JoNaThAn</FONT>
+Enter the Last Name: <FONT color=black>sChWaRtZ</FONT>
+
+Updating information for Jonathan Schwartz:
+Enter a new coordinate pair [x y]: <FONT color=black>80 75</FONT>
+Enter the new preferred network range: <FONT color=black>25</FONT>
+
+Enter your choice: <FONT color=black>S</FONT>
+Enter person one's First Name: <FONT color=black>James</FONT>
+Enter person one's Last Name: <FONT color=black>Gosling</FONT>
+Enter person two's First Name: <FONT color=black>Jonathan</FONT>
+Enter person two's Last Name: <FONT color=black>Schwartz</FONT>
+
+James Gosling and Jonathan Schwartz are not in each other's social network.
+
+Enter your choice: <FONT color=black>Q</FONT>
+Exiting program...
+</FONT>
+</PRE>
+
+
+<!--center><a href="http://www.cs.sunysb.edu/~cse214/sections.htm">Feel free to visit us during office hours or email us with your
+questions.</a></center-->
+<br>
+<hr>
+
+    <p align="center">
+      <font face="Arial" color="#800000"><strong><a href=
+      "http://www.cs.sunysb.edu/~cse214/courseinfo.htm">Course
+      Info</a> | <a href=
+      "http://www.cs.sunysb.edu/~cse214/schedule.htm">Schedule</a>
+
+      | <a href=
+      "http://www.cs.sunysb.edu/~cse214/sections.htm">Sections</a>
+      | <a href=
+      "http://www.cs.sunysb.edu/~cse214/index.html">Announcements</a>
+      | <a href=
+      "http://www.cs.sunysb.edu/~cse214/homework.htm">Homework</a>
+      | <a href=
+      "http://www.cs.sunysb.edu/~cse214/exams.htm">Exams</a> |
+      <a href=
+      "http://www.cs.sunysb.edu/~cse214/help.htm">Help/FAQ</a> |
+      <a href=
+      "http://www.cs.sunysb.edu/~cse214/grades.htm">Grades</a> |
+      <a href=
+      "http://www.cs.sunysb.edu/~cse214/index.html">HOME</a></strong></font>
+
+    </p><br>
+
+</body>
+</html>

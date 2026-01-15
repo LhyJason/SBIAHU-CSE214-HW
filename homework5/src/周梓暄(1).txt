@@ -1,0 +1,89 @@
+I) Insert a new user profile into the table.
+D) Delete a user profile from the table.
+U) Update the information for a given profile in the table.
+S) Search to see if two users are within each other's mobile social network.
+Q) Quit Program
+
+Enter your choice: I
+Enter the First Name: John
+Enter the Last Name: Wick
+Enter a coordinate pair [x y]: 20 20
+Enter the preferred network range: 10
+
+Enter your choice: i
+Enter the First Name: Max
+Enter the Last Name: Fosh
+Enter a coordinate pair [x y]: 10 10
+Enter the preferred network range: 100
+
+Enter your choice: I
+Enter the First Name: Lindsey
+Enter the Last Name: Stirling
+Enter a coordinate pair [x y]: 50 -50
+Enter the preferred network range: 200
+
+Enter your choice: i
+Enter the First Name: Emily
+Enter the Last Name: Bindiger
+Enter a coordinate pair [x y]: -101 100
+Enter the preferred network range: 10
+Error:  User coordinates not valid, entry ignored.
+
+Enter your choice: I
+Enter the First Name: Emily
+Enter the Last Name: Bindiger
+Enter a coordinate pair [x y]: 25 25
+Enter the preferred network range: 30
+
+Enter your choice: D
+Enter the First Name: No
+Enter the Last Name: One
+
+no one not found in table!
+
+Enter your choice: d
+Enter the First Name: John
+Enter the Last Name: Wick
+
+john wick has been removed from the table.
+
+Enter your choice: U
+Enter the First Name: John
+Enter the Last Name: Wick
+
+john wick not found in table!
+
+Enter your choice: u
+Enter the First Name: Max
+Enter the Last Name: Fosh
+
+Updating information for max fosh:
+Enter a coordinate pair [x y]: 15 15
+Enter the preferred network range: 100
+
+Enter your choice: S
+Enter person one's First Name: Max
+Enter person one's Last Name: Fosh
+Enter person two's First Name: Emily
+Enter person two's Last Name: Bindiger
+
+max fosh and emily bindiger are in each other's social network.
+
+Enter your choice: u
+Enter the First Name: mAx
+Enter the Last Name: fOSh
+
+Updating information for max fosh:
+Enter a coordinate pair [x y]: 80 20
+Enter the preferred network range: 100
+
+Enter your choice: s
+Enter person one's First Name: Max
+Enter person one's Last Name: Fosh
+Enter person two's First Name: Emily
+Enter person two's Last Name: Bindiger
+
+max fosh and emily bindiger are not in each other's social network.
+
+Enter your choice: Q
+Exiting program...

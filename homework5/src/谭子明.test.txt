@@ -1,0 +1,47 @@
+I
+U
+ZI
+5 -5
+10
+
+i
+THE
+SHY
+-150 0
+40
+
+I
+Do
+INB
+10 -10
+50
+
+i
+ML
+XG
+6 -6
+100
+
+D
+U
+ZI
+
+U
+Do
+INB
+9 -9
+60
+
+S
+Do
+INB
+ML
+XG
+
+U
+ML
+XG
+10 -10
+75
+
+q
