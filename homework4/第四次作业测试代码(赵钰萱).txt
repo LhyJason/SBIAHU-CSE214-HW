@@ -1,0 +1,87 @@
+I) Insert a new record
+C) Cancel membership
+L) List active members
+N) Number of active members
+S) Status of a member
+A) List active members in a given area
+D) Depth of the tree
+Q) Quit the program
+
+Enter Your Choice: I
+Enter a Name: Doe Jane
+Enter a Street: 32 Bayview Dr.
+Enter the City and State: Fishers Island, NY
+Enter a Zip Code: 06390
+Inserting Doe Jane into List...
+
+Enter Your Choice: c
+Enter a Name: Doe Jane
+Enter a Zip Code: 11111
+Member Not Found!
+
+Enter Your Choice: I
+Enter a Name: Epp Sussana
+Enter a Street: 78 Kirk Ave.
+Enter the City and State: Fishers Island, NY
+Enter a Zip Code: 06390
+Inserting Epp Sussana into List...
+
+Enter Your Choice: I
+Enter a Name: Doe Jane
+Enter a Street: 17 Brandywine St.
+Enter the City and State: Wood Bridge, CT
+Enter a Zip Code: 06525
+Inserting Doe Jane into List...
+
+Enter Your Choice: L
+List of all active members:
+
+        Name                  Street              City and State    Zip 
+--------------------- ------------------------- ------------------ -----
+Doe Jane              32 Bayview Dr.            Fishers Island, NY 06390
+Epp Sussana           78 Kirk Ave.              Fishers Island, NY 06390
+
+Doe Jane              17 Brandywine St.         Wood Bridge, CT    06525
+Enter Your Choice: n
+Number of active members at each zip code:
+
+  Zip Code    Number of Members
+  --------    -----------------
+   06390             2
+   06525             1
+
+Enter Your Choice: S
+Enter a Name: Doe Jane
+Enter a Zip Code: 06390
+Mailing address and status for user:
+
+32 Bayview Dr.            Fishers Island, NY 06390 (active)
+
+Enter Your Choice: S
+Enter a Name: Doe Jane
+Enter a Zip Code: 06525
+Mailing address and status for user:
+
+17 Brandywine St.            Wood Bridge, CT 06525 (active)
+
+Enter Your Choice: c
+Enter a Name: Doe Jane
+Enter a Zip Code: 06390
+Cancelling Membership for Doe Jane...
+
+Enter Your Choice: a
+Enter a Zip Code: 06390
+List of all active members with zip code greater than or equal to 06390:
+
+        Name                  Street              City and State    Zip 
+--------------------- ------------------------- ------------------ -----
+Epp Sussana           78 Kirk Ave.              Fishers Island, NY 06390
+
+Enter Your Choice: D
+The depth of the Tree is 2. 
+
+Enter Your Choice: q
+Exiting Program...
+
+
+

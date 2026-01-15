@@ -1,0 +1,299 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="Microsoft Theme" content="none, default">
+<meta name="Microsoft Border" content="none, default">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>CSE214 Homework 5</title>
+</head>
+<body style="margin:3em" bgcolor="#FFFFFF">
+<h2 align="center"><img border="0" src="http://www.cs.sunysb.edu/~cse214/images/logo.gif" width="200" height="100">&nbsp; <font color="#800080"><br>
+</font><font face="Arial" color="#808000">HOMEWORK - SPRING 2023</font></h2>
+<hr>
+<h3><font face="Arial"><strong>Programming Assignment 4 - due Friday, May 5th  by 7PM (China time)
+</strong></font></h3>
+
+<p><strong>REMINDERS: </strong></p>
+
+
+<ul style="margin-top:0in" type="disc">
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Be sure your code follows the <a href="http://www.cs.sunysb.edu/~cse214/codingstyle.htm">coding style</a>
+     for CSE214. </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Make sure you read the warnings
+     about <a href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">academic
+     dishonesty</a>. <i>Remember, all work you submit for homework assignments
+     MUST be entirely your own work. Also, group efforts are not allowed.</i> </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Login to your <a href="http://facdev04.cs.stonybrook.edu:8080/grade.Login">grading account</a>
+     and click "Submit Assignment" to upload and submit your
+     assignment. </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;;color:red">You are not allowed
+     to use ArrayList, Vector, Tree or any other Java API Data Structure classes to
+     implement this assignment except where noted.</span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">You may use Scanner,
+     InputStreamReader, or any other class that you wish for keyboard input.</span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+</ul>
+
+
+
+<p><b>Write a menu driven program that handles the mailing list for a club. Your program must receive the mailing records from the keyboard or a text file and allow the user to access the name, address, and the membership status for all members. To find a member, zip code is used as the main key and then a name match will be performed if necessary. To minimize the 
+access time, your program must be implemented using a standard Binary Search Tree. However you are not required to create a balanced tree.
+</p></b>
+
+
+</b></p> <p><b> 1. Write a fully documented class named Member that contains a name (last name followed by first name), street (string), cityState (string), zipCode (int) and active (bool). Also include the standard  accessors,
+mutuators and constructor(s) of your own design.
+</b></p> 
+
+</b></p> <p><b> 2.  Write a  fully documented class named MemberList that is a list of Member records. The list should always be sorted by name. However, this doesn't mean you run a sorting algorithm on the list. As you
+insert each Member  into the sorted list, traverse the list to figure out where the new record should go and insert there. Then the new list is still sorted without running a sorting algorithm. </b></p>
+<blockquote>
+<p><i><strong>NOTE 1: When a member is no longer active, you must simply set the member's "active" flag to false and ignore the record while printing the list of active members. In other words,  no record will actually be removed from the list. </strong></i></p>
+<p><strong><i>NOTE 2: As long as you do not use Java API tree classes, you may implement this list anyway you wish (array, linked list, Java API, etc.).</i></strong></p>
+<p><strong><i>NOTE 3: Since last name is followed by first name  in each instance of Member, you do not need any additional code for comparing two names. Simply use the compare method in String class, i.e. name1.compare(name2). </i></strong></p>
+<p><strong><i>NOTE 4: To improve efficiency of your program, you can define a counter for number of active records in each list. </i></strong></p>
+
+</blockquote>
+
+
+</b></p> 
+
+
+</b></p> <p><b> 3.  Write a  fully documented class named ZipCodeNode that represents a node for ZipCodeTree. The node should contain a zip code, a reference to a MemberList along with references to the node's two children. Note that the zip code must  be equal to all zip codes stored in MemberList. Include the standard accessors, mutuators and constructor(s).</b></p> 
+
+<p><b>4. Write a  fully documented class named ZipCodeTree that implements a standard Binary Search Tree of ZipCodeNode nodes, where zip code is the key for all comparisons in the tree.  
+
+<ul>
+
+<li> The class should have a private reference variable, "root" which references the root of the tree. </li>
+<li>Once a ZipCodeNode is inserted in the tree, it should not be removed in any case, even if all records in its MemberList are inactive. 
+<li>Total number of nodes in ZipCodeTree must be equal to the number of unique zip codes inserted by the user.
+<li>Include methods as needed
+<!--<li> Write a recursive mthod named numLeaves to  return the number of leaves in the subtree rooted at this node.</li>-->
+<!--<li><!--Write a method that takes a reference to a node  and prints -->
+<!--<li>Write a method that perform the tasks needed to sell a card</li>-->
+</ul>
+<blockquote>
+<p><i><strong>NOTE: You must implement this class <u>without</u> using Java API for tree operations. </p></strong></i></p>
+</blockquote>
+
+</b></p>
+
+<p><b>5. Write a fully documented class  named Club that uses ZipCodeTree and contains the main method and presents a menu to the user of the following menu options, along with what to do if the user selects that option:  
+
+<ul>
+
+
+<li>I  (<i>Insert a new record</i>)<br> 
+Prompt the user for a name, street, city-state, and zip code on four separate lines. Then insert this entry into the tree.
+
+
+<li>C (<i>Cancel membership</i>)<br>
+Prompt the user for a name and zip code on two separate lines, and if the name is found at the given zip code, cancel the membership for this  member (set "active" flag for this member to false). Otherwise if the name is not found, print a message (e.g. "Member Not Found"). Remember, you must first find the zip code in the tree, and then search for the name in the corresponding list.
+
+<li>L (<i>List active members</i>)<br>
+Print the list of all active members sorted by zip code and then by name. Keep in mind, inorder traversal of ZipCodeTree produces a sorted list by zip code, and since each MemberList is already  sorted by name, you do not need to apply a sorting algorithm. 
+<li>N (<i>Number of active members</i>)<br>
+Print number of active members at each zip code sorted by zip code. You must perform an inorder traversal of the tree to get a sorted list. Do not use a sorting algorithm.   
+
+<li>S (<i>Status of a member</i>)<br>
+Prompt the user for name and zip code on two separate lines, and if the information is found, print the mailing address for this member along with the membership status (active/inactive). If you can't find the name at the given zip code, print a message. Remember, you must first find the zip code in the tree, and then search for the name in the corresponding list.   
+<li>A (<i>List active members in a given area</i>)<br>
+Prompt the user for a zip code. If the zip code is not found, print a message, otherwise print the list of all active members who have a zip code greater than or equal to the given zip code. Once you find the subtree that holds the mailing records, you can invoke the same method used to list the records in option "L".     
+<li>D (<i>Depth of the tree</i>)<br>
+Print the depth of the ZipCodeTree.
+<li>Q (<i>Quit the program</i>) <br>
+Quit the program. 
+
+<li><font color="red">OPTIONAL - EXTRA CREDIT(5 points)<br>   R  (<i>Read mailing records from a file</i>)</font><br> 
+Prompt the user for a filename, then read the mailing records from the file and insert them in the tree. Each mailing record is saved on four separate lines, similar to the input entered from the keyboard. If the file doesn't exist or there is an error reading from the file, you must report an appropriate message and prompt the user for the next option.
+
+
+</ul>
+
+<p><b>6. Write exception class(es) for any exception that need to be thrown.</b></p>
+<font color=red>Note: You may define the tree traversal recursive methods in ZipCodeNode or ZipCodeTree. <!-- depending on your implementation.--></font>
+
+<p><b><u>INPUT FORMAT</b></p></u>
+<ul>
+<li>You may assume that all input values are valid and no error checking is required. However if an invalid option is selected, you must print a message and prompt the user for the next option.
+<li>Names are case-insensitive.
+<li>Each name contains last name followed by first name separated by <u>one</u> blank. All special characters,<br> except white space, may be used in first or last names, like O'Donnell or Wenz-Guercia.
+<li>Zip code is a 5-digit number and may contain leading zeros. For example
+ "06525" or "00123" are valid zip codes.
+<li>Menu options are case-insensitive (e.g. "N" and "n" are the same). </i> 
+<li>Each mailing record is saved in the input file on four separate lines in the following order:
+<ul>
+<li>Name
+<li>Street
+<li>City and state
+<li>Zip code
+</ul>
+<li>Our test cases have the following format: 
+<ul> 
+<li>Name (last name followed by first name) does not exceed 25 characters.
+<li>Street address does not  exceed 20 characters.
+<li>City and state are at most 20 characters.
+<li>Zip code is a 5-digit number. 
+<li>Members with duplicate names have different zip codes (i.e. names for each zip code are unique).
+<!--<li>Each first name is separated by <u>one</u> blank from the last name.-->
+</ul>
+</ul>
+<p><b><u>OUTPUT FORMAT</b></p></u>
+<ul>
+<li>All output must be accompanied by additional information explaining
+the specific operation. 
+<li>Each zip code must be printed as a 5-digit number. For example "06525" or "00321".
+<li>All lists must be printed in a nice and tabular form as shown in the sample output.
+<FONT color=#000000>The following example shows different ways of 
+  displaying the name and address at pre-specified positions 21, 26, 19, and 6 spaces wide.
+  If the '-' flag is given, then it will be left-justified (padding will be on the right), else the region is right-justified.
+The 's' identifier is for strings, the 'd' identifier is for integers.  Giving the additional '0' flag pads an integer with additional zeroes in front.</FONT></STRONG>
+
+<pre>
+    String name = "Doe Jane";
+    String address = "32 Bayview Dr.";
+    String city = "Fishers Island, NY";
+    int zip = 6390;
+    
+System.out.println(String.format("%-21s%-26s%19s%06d", name, address, city, zip));
+System.out.printf("%-21s%-26s%19s%06d", name, address, city, zip);
+
+Doe Jane             32 Bayview Dr.             Fishers Island, NY 06390
+Doe Jane             32 Bayview Dr.             Fishers Island, NY 06390
+</pre>
+</ul>
+
+
+
+<P><STRONG><U>SAMPLE INPUT/OUTPUT</U><BR></STRONG>
+Program output is in <FONT 
+color=blue>blue</FONT>. Comments are in <FONT color=green>green</FONT>. User 
+input is in black.</P>
+
+<PRE><STRONG><FONT color=blue>
+I) Insert a new record
+C) Cancel membership
+L) List active members
+N) Number of active members
+S) Status of a member
+A) List active members in a given area
+D) Depth of the tree
+Q) Quit the program
+
+Enter Your Choice:</FONT> I
+<FONT color=blue>Enter a Name:</FONT> Doe Jane
+<FONT color=blue>Enter a Street:</FONT> 32 Bayview Dr.
+<FONT color=blue>Enter the City and State:</FONT> Fishers Island, NY
+<FONT color=blue>Enter a Zip Code:</FONT> 06390
+<FONT color=blue>Inserting Doe Jane into List...</FONT>
+
+<FONT color=blue>Enter Your Choice:</FONT> c
+<FONT color=blue>Enter a Name:</FONT> Doe Jane
+<FONT color=blue>Enter a Zip Code:</FONT> 11111
+<FONT color=blue>Member Not Found!</FONT>
+
+<FONT color=green>//More                        </FONT>
+<FONT color=green>//     members                </FONT>
+<FONT color=green>//             are            </FONT>
+<FONT color=green>//                 inserted...</FONT>
+
+
+<FONT color=blue>Enter Your Choice:</FONT> L
+<FONT color=blue>List of all active members:
+
+        Name                  Street              City and State    Zip 
+--------------------- ------------------------- ------------------ -----
+Doe Jane              32 Bayview Dr.            Fishers Island, NY 06390
+Epp Sussana           78 Kirk Ave.              Fishers Island, NY 06390
+Zhang Brian           19 Penbrook Rd.           Fishers Island, NY 06390
+
+Doe Jane              17 Brandywine St.         Wood Bridge, CT    06525
+Main Michael          12 Harrison Rd.           Wood Bridge, CT    06525
+Spencer Susan         98 Shen Ct.               Wood Bridge, CT    06525
+
+Williams Deirdre      101 Dean Lane             Stony Brook, NY    11790
+Williams Kevin        101 Dean lane             Stony Brook, NY    11790
+Williams Shane        178 Stony Brook Rd.       Stony Brook, NY    11790
+Williams Tara         98 Stony Rd.              Stony Brook, NY    11790
+Zhang Steven          19 Ridgeway Rd.           Stony Brook, NY    11790
+
+Doe Jane              17 Main St.               Southampton, NY    11968
+Spencer David         101 Halsey Ave.           Southampton, NY    11968
+Spencer John          75 Raynor Rd.             Southampton, NY    11968
+Spencer Mark          57 Roman Dr.              Southampton, NY    11968
+Spencer Mary          91 Broidy Lane            Southampton, NY    11968
+Spencer Richard       109 Spinack Rd.           Southampton, NY    11968
+Von-Neuman Chris      65 Hampton Rd.            Southampton, NY    11968
+
+Enter Your Choice:</FONT> n
+<FONT color=blue>Number of active members at each zip code:
+
+  Zip Code    Number of Members
+  --------    -----------------
+   06390             3
+   06525             3
+   11790             5
+   11968             7
+</font>
+<FONT color=blue>Enter Your Choice:</FONT> S
+<FONT color=blue>Enter a Name:</FONT> Doe Jane
+<FONT color=blue>Enter a Zip Code:</FONT> 06390
+<FONT color=blue>Mailing address and status for user:
+
+32 Bayview Dr.            Fishers Island, NY 06390 (active)
+
+Enter Your Choice:</FONT> a
+<FONT color=blue>Enter a Zip Code:</FONT> 11968
+<FONT color=blue>List of all active members with zip code greater than or equal to 11968:
+
+        Name                  Street              City and State    Zip 
+--------------------- ------------------------- ------------------ -----
+Doe Jane              17 Main St.               Southampton, NY    11968
+Spencer David         101 Halsey Ave.           Southampton, NY    11968
+Spencer John          75 Raynor Rd.             Southampton, NY    11968
+Spencer Mark          57 Roman Dr.              Southampton, NY    11968
+Spencer Mary          91 Broidy Lane            Southampton, NY    11968
+Spencer Richard       109 Spinack Rd.           Southampton, NY    11968
+Von-Neuman Chris      65 Hampton Rd.            Southampton, NY    11968
+</font>
+<FONT color=blue>Enter Your Choice:</FONT> D
+<FONT color=blue>The depth of the Tree is 4.  <FONT color=green>//Print out the appropriate depth.</FONT></font>
+
+<FONT color=blue>Enter Your Choice:</FONT> C
+<FONT color=blue>Enter a Name:</FONT> Doe Jane
+<FONT color=blue>Enter a Zip Code:</FONT> 06390
+<FONT color=blue>Cancelling Membership for Doe Jane...</FONT>
+
+<FONT color=blue>Enter Your Choice:</FONT> q
+<FONT color=blue>Exiting Program...
+
+</pre>
+
+<hr>
+
+<p align=center style='text-align:center;'><strong><span
+style='font-family:Arial;color:maroon'><a
+href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">Course Info</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/schedule.htm">Schedule</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/sections.htm">Sections</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/announcements.htm">Announcements</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/homework.htm">Homework</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/exams.htm">Exams</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/help.htm">Help/FAQ</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/grades.htm">Grades</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/index.html">HOME</a> </span></strong></p>
+
+</body>
+</html>
