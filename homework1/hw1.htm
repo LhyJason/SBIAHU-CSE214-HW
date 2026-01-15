@@ -1,0 +1,1430 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="hw1_files/filelist.xml">
+<link rel=Edit-Time-Data href="hw1_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>CSE214 Homework 1</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Preferred Customer</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>user</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>177</o:TotalTime>
+  <o:Created>2007-09-05T21:39:00Z</o:Created>
+  <o:LastSaved>2007-09-05T22:14:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1929</o:Words>
+  <o:Characters>11001</o:Characters>
+  <o:Company>Dell Computer Corporation</o:Company>
+  <o:Lines>91</o:Lines>
+  <o:Paragraphs>25</o:Paragraphs>
+  <o:CharactersWithSpaces>12905</o:CharactersWithSpaces>
+  <o:Version>11.8132</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>90</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Times New  Roman";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"Courier  New";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1122460749;
+	mso-list-type:hybrid;
+	mso-list-template-ids:957534478 -1673856386 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1595361819;
+	mso-list-template-ids:1164068158;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1632861249;
+	mso-list-template-ids:418697210;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1681078274;
+	mso-list-template-ids:-1324024226;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1943757147;
+	mso-list-template-ids:1145478970;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name="Microsoft Border" content="none, default">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="4098"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body style="margin:2em" bgcolor=white lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 align=center style='text-align:center'><img width=200 height=100
+id="_x0000_i1025" src="http://www.cs.stonybrook.edu/~cse214/images/logo.gif" border=0>&nbsp;
+<span style='color:purple'><br>
+</span><span style='font-family:Arial;color:maroon'>HOMEWORK SPRING 2023</span></h2>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h3><strong><span style='font-family:Arial'>HOMEWORK 1 - due Friday,
+March 24th no later than 7:00PM (China Time)</span></strong></h3>
+
+
+<ul style="margin-top:0in" type="disc">
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Be sure your code follows the <a href="http://www.cs.sunysb.edu/~cse214/codingstyle.htm">coding style</a>
+     for CSE214. </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Make sure you read the warnings
+     about <a href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">academic
+     dishonesty</a>. <i>Remember, all work you submit for homework assignments
+     MUST be entirely your own work. Also, group efforts are not allowed.</i> </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Login to your <a href="http://facdev04.cs.stonybrook.edu:8080/grade.Login">grading account</a>
+     and click "Submit Assignment" to upload and submit your
+     assignment. </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;;color:red">You are not allowed
+     to use ArrayList, Vector or any other Java API Data Structure classes to
+     implement this assignment except where noted.</span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">You may use Scanner,
+     InputStreamReader, or any other class that you wish for keyboard input.</span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+</ul>
+
+<br>
+<p class=MsoNormal><strong><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Vectors are mathematical structures that arise in many
+different fields of mathematics and computer science, ranging from scientific
+simulations that require three-dimensional physics to computer graphics, where
+vectors are used to determine the way light is reflected off of a surface. A
+vector can be thought of as a sequence of values, referred to as elements in
+this assignment, that specify the magnitude of the vector in a number of
+different dimensions. For example, any vector drawn on the Cartesian plane can
+be thought of as an arrow drawn from the origin to a point (x, y) with its head
+at the point (x, y). In this case, the x element of the vector is the signed
+horizontal distance from the origin while the y element is the signed vertical
+distance from the origin. This can be further extended into three dimensions
+where another element z is required to specify depth (which in the case of a
+Cartesian plane would be signed distance into and out of the page). Vectors can
+have, by mathematical definition, any number of elements greater or equal to
+one. Any given vector can have duplicate elements and all elements, including
+leading and trailing zeroes, are significant. The order of elements in a vector
+is important.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><strong><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>The purpose of this assignment is to design a Vector
+Abstract Data Type that defines these vectors as Java objects and can have
+various vector operations performed upon them. A test program will also be
+required to verify the correctness of the Vector ADT.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>1. Write a fully-documented class named <span class=SpellE>VectorADT</span>
+that stores a vector in an integer array. You may store the elements any way
+you wish in this array, but it is strongly recommended that the first element is
+stored in array position zero, the second in position one, etc. all the way up
+through element n being stored in position n-1. The number of elements in each
+vector should be declared in a member variable of the <span class=SpellE>VectorADT</span>
+class. Make sure in your code that you check that the size is less than 60,
+which should be stored in a final variable called MAX_ELEMENTS. If you don</span></strong><strong><span
+style='font-family:Arial'>&#8217;t use</span></strong><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'> MAX_ELEMENTS
+and instead use the number 60 the result will be a 5 point deduction! The class
+should be defined based on the following specification:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
+
+<p class=MsoNormal style='text-indent:.5in'><strong><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>public class <span
+class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='text-indent:.5in'><strong><span style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'>The <span class=SpellE>VectorADT</span>
+class implements an abstract data type for vectors that contains common vector
+operations.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Constructor
+     for <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+<span class=SpellE>VectorADT</span>(<span class=SpellE>int</span> size)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Construct an
+instance of the <span class=SpellE>VectorADT</span> class of a certain size
+with all elements set to 0.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameter:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>size - the
+size that this <span class=SpellE>VectorADT</span> will be<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Precondition:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>size is
+between 1 and MAX_ELEMENTS, inclusive.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Postcondition</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This <span
+class=SpellE>VectorADT</span> has been set to the zero vector (all elements are
+zero) of with a size equal to the parameter.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Throws:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>InvalidSizeException</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'> - Indicates
+that size is not within the valid range.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>clone<o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+Object clone()<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Generates a
+copy of this <span class=SpellE>VectorADT</span>.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.5in'><strong><span style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'>The return value is a copy of
+this <span class=SpellE>VectorADT</span>. Subsequent changes to the copy will
+not affect the original, nor vice versa. Note that the return value must be
+typecast to a <span class=SpellE>VectorADT</span> before it can be used.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>equals<o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+<span class=SpellE>boolean</span> equals (Object <span class=SpellE>obj</span>)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Compare this <span
+class=SpellE>VectorADT</span> to another object for equality.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameters:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>obj</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'> - an object to
+which this <span class=SpellE>VectorADT</span> is compared<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A return value
+of true indicates that <span class=SpellE>obj</span> refers to a <span
+class=SpellE>VectorADT</span> object with the same values and size as this <span
+class=SpellE>VectorADT</span>. Otherwise, the return value is false.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Note:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>If <span
+class=SpellE>obj</span> is null or it is not a <span class=SpellE>VectorADT</span>
+object, then the return value is false.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><span
+     class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:
+     "Times New  Roman"'>setElement</span></strong></span><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'><o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+void <span class=SpellE>setElement</span>(<span class=SpellE>int</span> value, <span
+class=SpellE>int</span> element)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Sets the
+element associated with the given position for this <span class=SpellE>VectorADT</span>.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameters:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>value - new
+value for the element in this <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>element -
+position of the element to alter in this <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Preconditions:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This object
+has been instantiated and element is a valid element (between 0 and the size of
+this <span class=SpellE>VectorADT</span> - 1, inclusive).<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Postcondition</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Sets the value
+of the given element in this <span class=SpellE>VectorADT</span> to the given
+value.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Throws:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>IllegalArgument</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates
+that element does not correspond to a valid position of the array.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><span
+     class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:
+     "Times New  Roman"'>getElement</span></strong></span><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'><o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+<span class=SpellE>int</span> <span class=SpellE>getElement</span>(<span
+class=SpellE>int</span> element)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Gets the
+element associated with the given position for this <span class=SpellE>VectorADT</span>.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameter:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>element -
+position of the element to access in this <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Preconditions:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This object
+has been instantiated and element is a valid element (between 0 and the size of
+this <span class=SpellE>VectorADT</span> - 1, inclusive).<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The value of
+the given element in this <span class=SpellE>VectorADT</span>.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Throws:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>IllegalArgument</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates
+that element does not correspond to a valid position of the array.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><span
+     class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:
+     "Times New  Roman"'>getSize</span></strong></span><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'><o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+<span class=SpellE>int</span> <span class=SpellE>getSize</span>()<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns the
+size of this <span class=SpellE>VectorADT</span>.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The size of
+this <span class=SpellE>VectorADT</span> object.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>add<o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+static <span class=SpellE>VectorADT</span> add(<span class=SpellE>VectorADT</span>
+v1, <span class=SpellE>VectorADT</span> v2)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Generates and
+returns the sum of two given <span class=SpellE>VectorADTs</span>. Note that
+vector addition is defined by adding the corresponding elements of each vector
+to get the corresponding element of the sum vector.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameters:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v1 - the first
+<span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v2 - the
+second <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Preconditions:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The <span
+class=SpellE>VectorADT</span> objects referred to by v1 and v2 have been
+instantiated and both have the same size.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A <span
+class=SpellE>VectorADT</span> containing the sum of the two given <span
+class=SpellE>VectorADT</span> parameters (v1 + v2).<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Throws:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>IllegalArgument</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates
+that either v1 or v2 is null.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>InvalidSizeException</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates
+that v1 and v2 are of different sizes.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>subtract<o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+static <span class=SpellE>VectorADT</span> subtract(<span class=SpellE>VectorADT</span>
+v1, <span class=SpellE>VectorADT</span> v2)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.5in'><strong><span style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'>Generates and returns the
+difference of two given <span class=SpellE>VectorADTs</span>. Note that vector subtraction
+is defined by subtracting the corresponding elements of each vector to get the
+corresponding element of the difference vector.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameters:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v1 - the first
+<span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v2 - the
+second <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Preconditions:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The <span
+class=SpellE>VectorADT</span> objects referred to by v1 and v2 have been
+instantiated and both have the same size.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=GramE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A
+<span class=SpellE>VectorADT</span> containing the difference of the two given <span
+class=SpellE>VectorADT</span> parameters (v1 </span></strong><strong><span
+style='font-family:Arial'>-</span></strong><strong><span style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'> v2).</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Throws:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>IllegalArgument</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates
+that either v1 or v2 is null.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>InvalidSizeException</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates that
+v1 and v2 are of different sizes.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><span
+     class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:
+     "Times New  Roman"'>multiplyByScalar</span></strong></span><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'><o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+static <span class=SpellE>VectorADT</span> <span class=SpellE>multiplyByScalar</span>(<span
+class=SpellE>VectorADT</span> v, <span class=SpellE>int</span> scalar)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Generates and
+returns the product of a <span class=SpellE>VectorADTs</span> and a scalar
+(i.e., regular number). Note that multiplication by a scalar is to multiply
+each element in the vector by the scalar number.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameters:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v - the <span
+class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>scalar - the
+scalar to multiply the <span class=SpellE>VectorADT</span> by<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Precondition:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The <span
+class=SpellE>VectorADT</span> object referred to by vector has been
+instantiated.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A <span
+class=SpellE>VectorADT</span> containing the product of the <span class=SpellE>VectorADT</span>
+and the scalar. <o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Notes:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.5in'><strong><span style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'>1. The return value is null if v
+is null. </span></strong><b><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><br>
+<strong><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>2.
+The object being referred to by v is unaltered. </span></strong><br>
+<strong><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>3.
+Cloning v before multiplying is a requirement in this method or a 5 point
+deduction will occur. It is also recommended that you write a non-static helper
+method that allows all elements in a vector to be multiplied by a scalar
+number.<o:p></o:p></span></strong></span></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><span
+     class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:
+     "Times New  Roman"'>dotProduct</span></strong></span><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'> <o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New"'>public static <span class=SpellE>int</span> <span
+class=SpellE>dotProduct</span>(<span class=SpellE>VectorADT</span> v1, <span
+class=SpellE>VectorADT</span> v2)<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.5in'><strong><span style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'>Generates and returns the dot
+product of two given <span class=SpellE>VectorADTs</span>. Note that the dot
+product is defined as the sum of all the products of corresponding elements in
+the two vectors, shown as follows:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>(<span
+class=GramE>v1[</span>0] * v2[0]) + (<span class=GramE>v1[</span>1] * v2[1]) + </span></strong><strong><span
+style='font-family:Arial'>&#8230; + (v1[v1.getSize() - 1] * v2[v2.getSize() -</span></strong><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'> 1])<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Parameters:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v1 - the first
+<span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>v2 - the
+second <span class=SpellE>VectorADT</span><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Preconditions:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The <span
+class=SpellE>VectorADT</span> objects referred to by v1 and v2 have been
+instantiated and both have the same size.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The dot
+product of the two given <span class=SpellE>VectorADT</span> parameters. <o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Throws:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>IllegalArgument</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates that
+either v1 or v2 is null.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>InvalidSizeException</span></strong></span><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>- Indicates
+that v1 and v2 are of different sizes.<o:p></o:p></span></strong></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list .5in'><span
+     class=SpellE><strong><span style='font-family:Arial;mso-bidi-font-family:
+     "Times New  Roman"'>toString</span></strong></span><strong><span
+     style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'><o:p></o:p></span></strong></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New  Roman"'>public
+String <span class=SpellE>toString</span>()<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns a
+String representation of this <span class=SpellE>VectorADT</span>.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New  Roman"'>Returns:<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><strong><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The elements
+of this <span class=SpellE>VectorADT</span> in order from element 0 to element <span
+class=SpellE>getSize</span>() - 1, each separated by spaces.<o:p></o:p></span></strong></p>
+
+<p><b><span style='font-family:Arial'>Note:</span></b></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:red;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l2 level1 lfo2;tab-stops:list .5in'><b><span
+     style='font-size:14.0pt;font-family:Arial'>You are not allowed to use any
+     Java API classes to implement <span class=SpellE>VectorADT</span>. <o:p></o:p></span></b></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list .5in'><b><span style='font-family:
+     Arial'>You may define additional methods as you wish as long as all of the
+     above methods meet the given specifications.<o:p></o:p></span></b></li>
+</ul>
+
+<p><b><span style='font-family:Arial;color:red'><span
+style='mso-spacerun:yes'> </span></span></b><b><span style='font-family:Arial'>2.
+Write a fully documented class named <span class=SpellE>VectorOperations</span>
+that is based upon the following specification: <o:p></o:p></span></b></p>
+
+<blockquote style='margin-top:5.0pt;margin-bottom:5.0pt'>
+
+<p class=MsoNormal><strong><span style='font-family:"Courier  New"'>public
+class <span class=SpellE>VectorOperations</span></span></strong> <b><span
+style='font-family:Arial'><br>
+The <span class=SpellE>VectorOperations</span> class is a Java application that
+tests the methods of the <span class=SpellE>VectorADT</span> class and allows
+the user to input long vectors as a list of elements separated by spaces and
+perform operations on them.<o:p></o:p></span></b></p>
+
+</blockquote>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><strong><span
+     style='font-family:Arial'>main</span></strong><b><br>
+     </b><strong><span style='font-family:"Courier New"'>public static void
+     main(String[] <span class=SpellE>args</span>)</span> </strong><b><br>
+     </b><b><span style='font-family:Arial'>When the program begins, the main
+     program should display a menu that allows following operations: <o:p></o:p></span></b></li>
+ <ol start=1 type=1>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo3;tab-stops:list 1.0in'><b><span
+      style='font-family:Arial'>A (Add two vectors)<o:p></o:p></span></b></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo3;tab-stops:list 1.0in'><b><span
+      style='font-family:Arial'>D (Dot product)<o:p></o:p></span></b></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo3;tab-stops:list 1.0in'><b><span
+      style='font-family:Arial'>E (test if two vectors are equal)<o:p></o:p></span></b></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo3;tab-stops:list 1.0in'><b><span
+      style='font-family:Arial'>M (Multiply two vectors)<o:p></o:p></span></b></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo3;tab-stops:list 1.0in'><b><span
+      style='font-family:Arial'>S (Subtract two vectors)<o:p></o:p></span></b></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo3;tab-stops:list 1.0in'><b><span
+      style='font-family:Arial'>Q (Quit Program) <o:p></o:p></span></b></li>
+ </ol>
+</ul>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:Arial'>&nbsp;3. Also, provide additional <span class=GramE>class(</span><span
+class=SpellE>es</span>) to handle the exceptions. </span></strong><b><span
+style='font-family:Arial'><br>
+<br>
+<strong><span style='font-family:Arial;color:red'>Note: You may include
+additional methods in the <span class=SpellE>VectorADT</span> class or <span
+class=SpellE>VectorOperations</span>, as necessary. <o:p></o:p></span></strong></span></b></p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><u><span
+style='font-family:Arial'>INPUT FORMAT:</span></u></b></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list .5in'><b><span style='font-family:
+     Arial'>Each vector is entered on one line. <o:p></o:p></span></b></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list .5in'><b><span style='font-family:
+     Arial'>Menu options are case-insensitive (e.g. 'A' and 'a' are the same).
+     You may use the </span></b><span class=SpellE><b><span style='font-family:
+     "Courier New"'>equalsIgnoreCase</span></b></span><b><span
+     style='font-family:Arial'> method of the String class for these
+     comparisons. <o:p></o:p></span></b></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'><strong><span
+     style='font-family:Arial'>Each vector is to be entered on one line, with
+     each element to be separated by spaces. The first element entered is the
+     first element of the vector. ORDER IS IMPORTANT. The size of the <span
+     class=SpellE>VectorADT</span> to be created from a line is equal to the
+     number of input values on that line (HINT: The <span class=SpellE>StringTokenizer</span>
+     class has a <span class=SpellE><span class=GramE>countTokens</span></span><span
+     class=GramE>(</span>) method that might be useful).</span><o:p></o:p></strong></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'><b><span
+     style='font-family:Arial'>You may assume that all input numbers are
+     integers (negative or positive).<span style='mso-spacerun:yes'>   </span></span><strong><o:p></o:p></strong></b></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo4;tab-stops:list .5in'><strong><span
+     style='font-family:Arial'>YOU ARE NOT REQUIRED TO CHECK FOR INVALID
+     NUMBERS IN THE INPUT. Your program will not be tested with invalid numbers.
+     However, <span class=SpellE>VectorADTs</span> with different sizes will be
+     checked. </span></strong><span style='font-family:Arial'><o:p></o:p></span></li>
+</ul>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><u><span
+style='font-family:Arial'>OUTPUT FORMAT</span></u></b><b><span
+style='font-family:Arial'><o:p></o:p></span></b></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l4 level1 lfo5;tab-stops:list .5in'><b><span style='font-family:
+     Arial'>Ec<strong><span style='font-family:Arial'>ho the elements of the
+     vectors to the user after each input entry has been completed. </span><o:p></o:p></strong></span></b></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l4 level1 lfo5;tab-stops:list .5in'><b><span style='font-family:
+     Arial'>Be sure your prompts and error messages for the user are clear and
+     understandable. </span><strong><o:p></o:p></strong></b></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l4 level1 lfo5;tab-stops:list .5in'><b><span style='font-family:
+     Arial'>Output must be accompanied by additional information (or symbols)
+     explaining the specific operation, as shown in the sample input/output. <strong><span
+     style='font-family:Arial'><o:p></o:p></span></strong></span></b></li>
+</ul>
+
+<p class=MsoNormal><strong><u><span style='font-family:Arial'>SAMPLE
+INPUT/OUTPUT</span></u></strong><u><o:p></o:p></u></p>
+
+<p class=MsoNormal><b><span style='font-family:Arial'><br>
+<strong><span style='font-family:Arial'>Note: Program output is in <span
+style='color:blue'>blue</span>, comments are in <span style='color:green'>green</span>
+and user input is in black. <span style='color:blue'><o:p></o:p></span></span></strong></span></b></p>
+
+<pre><b><span style='color:blue'>A) Add </span></b></pre><pre><b><span
+style='color:blue'>D) Dot Product <o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>E) Equality<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>M) Multiply<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>S) Subtract<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>Q) Quit program <br>
+<br>
+Enter Your Choice:</span> A<span style='color:blue'> <o:p></o:p></span></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-spacerun:yes'> </span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2 3 4 5 16 7 8<o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>8 7 6 5 4 3 2 1<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>   </span><o:p></o:p></span></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>1 2 3 4 5 16 7 8 +<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>8 7 6 5 4 3 2 1 =<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>9 <span class=SpellE>9</span> <span class=SpellE>9</span>
+<span class=SpellE>9</span> <span class=SpellE>9</span> 19 9 <span
+class=SpellE>9</span><o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'> </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> a<span style='mso-spacerun:yes'>   </span><span
+style='color:green'><span style='mso-spacerun:yes'>     </span>// Ignores case</span><o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>0 <span class=SpellE>0</span> <span class=SpellE>0</span> <span
+class=SpellE>0</span> <span class=SpellE>0</span> <span class=SpellE>0</span> <span
+class=SpellE>0</span> -3 3 5 6 7<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-spacerun:yes'> </span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>3 4 6<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>0 <span class=SpellE>0</span> <span class=SpellE>0</span>
+<span class=SpellE>0</span> <span class=SpellE>0</span> <span class=SpellE>0</span>
+<span class=SpellE>0</span> -3 3 5 6 7 +<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>3 4 6 =<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>Size Error<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><o:p>&nbsp;</o:p></span></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> S<span style='mso-spacerun:yes'>  </span><o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>9 8 7 6 5 4 3 2 1<o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2 3 4 5 6 7 8 9 <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-spacerun:yes'>    </span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'>9 8 7 6 5 4 3 2 1 -<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>1 2 3 4 5 6 7 8 9 =<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>8 6 4 2 0 -2 -4 -6 -8<o:p></o:p></span></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> S<span style='mso-spacerun:yes'>  </span><o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>4 3 2 5 1 3 7 20<o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>2 5 7 9 2 3 5 8<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>   </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>4 3 2 5 1 3 7 20 -<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>2 5 7 9 2 3 5 8 =<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>2 -2 -5 -4 -1 0 2 12<o:p></o:p></span></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> M<span style='mso-spacerun:yes'>  </span><o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter Number:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>5<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-spacerun:yes'> </span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'>Enter Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 5 7 2 4 -7<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>5 *<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>1 5 7 2 4 -7 =<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>5 25 35 10 20 -35<o:p></o:p></span></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> M<span style='mso-spacerun:yes'>  </span><o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter Number:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>0<o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2 5 -6 0 3 2 5 0 -1 2 4 5 12 4<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>0 *<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>1 2 5 -6 0 3 2 5 0 -1 2 4 5 12 4 =<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>0 <span class=SpellE>0</span> <span class=SpellE>0</span> <span
+class=SpellE>0</span> <span class=SpellE>0</span> <span class=SpellE>0</span> <span
+class=SpellE>0</span> <span class=SpellE>0</span> <span class=SpellE>0</span> <span
+class=SpellE>0</span> <span class=SpellE>0</span> <span class=SpellE>0</span> <span
+class=SpellE>0</span> <span class=SpellE>0</span> <span class=SpellE>0</span><o:p></o:p></span></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> d<span style='mso-spacerun:yes'>   </span><span
+style='color:green'><span style='mso-spacerun:yes'>     </span>// Ignores case</span><o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2 6 8 3 4 8 <o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>2 4 7 4 2 4 0<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>1 2 6 8 3 4 8 (dot)<o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>2 4 7 4 2 4 0 = <o:p></o:p></span></b></pre><pre><b><span
+style='color:blue'>106<o:p></o:p></span></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> D <o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 <span class=SpellE>1</span> <span class=SpellE>1</span> <span
+class=SpellE>1</span> <span class=SpellE>1</span><o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>2 3 4 5 6<o:p></o:p></span></b></p>
+
+<pre><b><span style='color:blue'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>1 <span
+class=SpellE>1</span> <span class=SpellE>1</span> <span class=SpellE>1</span> <span
+class=SpellE>1</span> (dot)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>2 3 4 5 6 = <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:blue'>20<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-spacerun:yes'> </span><o:p></o:p></span></b></p>
+
+<pre><b><span style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> E <o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2 4 6 7<o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2 4 6 7 <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>1 2 4 6 7 =<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>1 2 4 6 <span class=GramE>7 ?</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+font-family:"Courier New";color:blue'>true</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<pre><b><span style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> E <o:p></o:p></b></pre><pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span
+style='color:blue'>Enter First Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1<o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:blue'>Enter Second Vector:</span><o:p></o:p></b></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>1 2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>1 =<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'>1 <span class=GramE>2 ?</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+font-family:"Courier New";color:blue'>false</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Courier New";color:blue'><o:p></o:p></span></b></p>
+
+<pre><b><o:p>&nbsp;</o:p></b></pre><pre><b><span style='color:green'>// Menu not shown<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Enter Your Choice:</span> Q<span style='mso-spacerun:yes'>  </span><o:p></o:p></b></pre><pre><b><span style='mso-spacerun:yes'> </span><o:p></o:p></b></pre><pre><b><span
+style='color:blue'>Program terminating normally...</span><o:p></o:p></b></pre><pre><b> <o:p></o:p></b></pre>
+
+<div class=MsoNormal align=center style='text-align:center;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:Arial;font-weight:normal'>
+
+<hr size=2 width="100%" align=center>
+
+</span></strong></div>
+
+<p align=center style='text-align:center;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:Arial;color:maroon'><a
+href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">Course Info</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/schedule.htm">Schedule</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/sections.htm">Sections</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/announcements.htm">Announcements</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/homework.htm">Homework</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/exams.htm">Exams</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/help.htm">Help/FAQ</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/grades.htm">Grades</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/index.html">HOME</a> </span></strong></p>
+
+</div>
+
+</body>
+
+</html>
