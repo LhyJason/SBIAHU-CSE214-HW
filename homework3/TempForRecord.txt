@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+
+
+public class Simulator {
+    public static void simulate(double probability, int numberOfFloors, int numberOfElevator, int length) throws IllegalArgumentException {
+        System.out.println("//Now, the actual simulation will occur, although this does not need to be printed.\n" +
+                "//To show the queue, we will use the notation (source, destination, time entered) to show requests\n" +
+                "//The fronts of the queue is to the left and the rear is to the right\n" +
+                "//Elevators have the notation [Floor X, state, request_being handled]\n");
+        ArrayList<Elevator> elevators = new ArrayList<>();
+        RequestQueue queue = new RequestQueue();
+        BooleanSource source = new BooleanSource(probability);
+
+        //创建电梯
+        for (int i = 0; i < numberOfElevator; i++) {
+            Elevator e = new Elevator();
+            elevators.add(e);
+        }
+        //设置初始条件
+        //利用方法
+        Request r = new Request(numberOfFloors);
+
+        //进行电梯移动的循环
+        int time;
+        int totalRequests = 0;
+        int currentRequests = 0;
+        for (time = 1; time <= length; time++) {
+            System.out.print("Step " + time + ": ");
+            if (source.requestArrived()) {
+                queue.enqueue(r);
+                r.setTimeEntered(time);
+                totalRequests++;
+                currentRequests++;
+                System.out.print("A request arrives from Floor " + r.getSourceFloor() + " to Floor " + r.getDestinationFloor());
+                System.out.println();
+            } else {
+                System.out.print("Nothing arrives");
+                System.out.println();
+            }
+
+            for (int i = 0; i < elevators.size(); i++) {
+                Elevator e = elevators.get(i);
+                int state = e.getElevatorState();
+                switch (state) {
+                    case Elevator.IDLE -> {
+                        Request next = queue.dequeue();
+                        if (next != null) {
+                            e.setRequest(next);
+                            if (next.getSourceFloor() != e.getCurrentFloor()) {
+                                e.setElevatorState(Elevator.TO_SOURCE);
+                            } else {
+                                e.setElevatorState(Elevator.TO_DESTINATION);
+                            }
+
+                        }
+                    }
+                    case Elevator.TO_SOURCE -> {
+                        if (e.getCurrentFloor() > e.getRequest().getSourceFloor()) {//电梯需向下
+                            e.setCurrentFloor(e.getCurrentFloor() - 1);
+                        } else if (e.getCurrentFloor() < e.getRequest().getSourceFloor()) {//电梯需向上
+                            e.setCurrentFloor(e.getCurrentFloor() + 1);
+                        } else {//电梯到达需求层，改变电梯状态
+                            e.setElevatorState(Elevator.TO_DESTINATION);
+
+                        }
+                    }
+                    case Elevator.TO_DESTINATION -> {
+                        if (e.getCurrentFloor() > e.getRequest().getSourceFloor()) {//电梯需向下
+                            e.setCurrentFloor(e.getCurrentFloor() - 1);
+                        } else if (e.getCurrentFloor() < e.getRequest().getSourceFloor()) {//电梯需向上
+                            e.setCurrentFloor(e.getCurrentFloor() + 1);
+                        } else {//电梯到达需求层，改变需求和电梯状态
+                            e.setRequest(null);
+                            e.setElevatorState(Elevator.IDLE);
+                            currentRequests--;
+                            int totalTime = time - r.getTimeEntered();
+                            System.out.println("Total Wait Time = " + totalTime + ", Total Requests = " + totalRequests);
+                        }
+                    }
+                    default -> throw new IllegalArgumentException();
+                }
+            }
+        }
+
+
+    }
+}
+

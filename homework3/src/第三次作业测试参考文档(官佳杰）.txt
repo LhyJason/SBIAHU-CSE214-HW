@@ -1,0 +1,31 @@
+//注意点
+总请求数是电梯所接到的总数，不包括未接到的请求
+等待时间的计算是指从请求发出到接到的时间，不包含电梯接到后运行的时间
+//由于输出结果不确定，故第一步需要取一些特殊的来调试测试代码是否会报错（如果相互之间结果相差过大，就需要调用代码查看电梯实际运行路径，来判断是否存在情况考虑不周）
+probability	#floors	#elevators 	total time steps
+0		10	10		100
+1		10	10		100
+0.5		10	20		500
+0.75		2	10		200
+0.8		3	20		200
+0.99		100	100		1000
+0.99		50	1000		1000
+0.01		100	2		1000
+-2		10 	10		100
+1.01		10	10		100
+0.5		-2	2		100
+//第二步特殊情况
+1）p值 不在0-1的情况
+2）输入负数 的情况
+3）两层楼 的情况（这里最容易出问题）
+4）排除目的地就是起点的情况
+5）电梯所在楼层即是请求的起点，其目的地就是该起点的上一层或者下一层
+6）尽量多的随机输入数字，可以判断出是否存在未考虑到的情况或者代码问题
+//第三步进行极端情况模拟（普通程序，非优化程序）
+case	probability	#floors	#elevators	total time steps	  expected result
+1	0.99	                10	100	               100	                   average wait time should be <10, but not 0
+2	0.99	                100	100	               100	                  average wait time should be<100, and bigger than case1
+3	0.01	                2	1	               1000	                  the number of requests should be very closed to 0
+4	0.5	                2	1000	              1000	                  the number of requests should be around 500
+
+

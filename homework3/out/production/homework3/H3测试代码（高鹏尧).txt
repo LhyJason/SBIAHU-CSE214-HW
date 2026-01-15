@@ -1,0 +1,168 @@
+注：本次作业由于输出结果并不确定，需要重点进行特殊情况示例来判断是否存在考虑不全的情况(见部分二)。
+一、情况示例(普通程序，非优化程序)
+输入参数：p=0.5     楼层：10      电梯数：3        时间：10；
+Welcome to the Elevator simulator!
+case 1:
+Please enter the probability of arrival for Requests: 0.5
+Please enter the number of floors: 10
+Please enter the number of elevators: 3
+Please enter the length of the simulation (in time units): 10
+
+//Now, the actual simulation will occur, although this does not need to be printed.
+//To show the queue, we will use the notation (source, destination, time entered) to show requests
+//The fronts of the queue is to the left and the rear is to the right
+//Elevators have the notation [Floor X, state, request_being handled]
+Step 1: A request arrives from Floor 6 to Floor 1
+	 //The 1 elevator was idle, so it starts moving towards the source floor
+Requests: (6,1,1)
+Elevators: [Floor 2, TO_SOURCE, (6,1,1)][Floor 1, IDLE, ---][Floor 1, IDLE, ---]
+
+
+
+Step 2: A request arrives from Floor 10 to Floor 3
+	 //The 2 elevator was idle, so it starts moving towards the source floor
+Requests: (10,3,2)
+Elevators: [Floor 3, TO_SOURCE, (6,1,1)][Floor 2, TO_SOURCE, (10,3,2)][Floor 1, IDLE, ---]
+
+
+
+Step 3: A request arrives from Floor 2 to Floor 8
+	 //The 3 elevator was idle, so it starts moving towards the source floor
+Requests: (2,8,3)
+Elevators: [Floor 4, TO_SOURCE, (6,1,1)][Floor 3, TO_SOURCE, (10,3,2)][Floor 2, TO_DESTINATION, (2,8,3)]
+
+
+
+Step 4: A request arrives from Floor 8 to Floor 1
+Requests: (8,1,4)
+Elevators: [Floor 5, TO_SOURCE, (6,1,1)][Floor 4, TO_SOURCE, (10,3,2)][Floor 3, TO_DESTINATION, (2,8,3)]
+
+
+
+Step 5: A request arrives from Floor 1 to Floor 2
+Requests: (1,2,5)
+Elevators: [Floor 6, TO_DESTINATION, (6,1,1)][Floor 5, TO_SOURCE, (10,3,2)][Floor 4, TO_DESTINATION, (2,8,3)]
+
+
+
+Step 6: A request arrives from Floor 8 to Floor 9
+Requests: (8,9,6)
+Elevators: [Floor 5, TO_DESTINATION, (6,1,1)][Floor 6, TO_SOURCE, (10,3,2)][Floor 5, TO_DESTINATION, (2,8,3)]
+
+
+
+Step 7: Nothing Arrives
+Requests: (8,9,6)
+Elevators: [Floor 4, TO_DESTINATION, (6,1,1)][Floor 7, TO_SOURCE, (10,3,2)][Floor 6, TO_DESTINATION, (2,8,3)]
+
+
+
+Step 8: A request arrives from Floor 3 to Floor 9
+Requests: (3,9,8)
+Elevators: [Floor 3, TO_DESTINATION, (6,1,1)][Floor 8, TO_SOURCE, (10,3,2)][Floor 7, TO_DESTINATION, (2,8,3)]
+
+
+
+Step 9: A request arrives from Floor 8 to Floor 4
+	 //The 3 elevator was idle, so it starts moving towards the source floor
+Requests: (8,4,9)
+Elevators: [Floor 2, TO_DESTINATION, (6,1,1)][Floor 9, TO_SOURCE, (10,3,2)][Floor 8, TO_SOURCE, (8,1,4)]
+
+
+
+Step 10: A request arrives from Floor 3 to Floor 8
+	 //The 1 elevator was idle, so it starts moving towards the source floor
+Requests: (3,8,10)
+Elevators: [Floor 1, TO_SOURCE, (1,2,5)][Floor 10, TO_DESTINATION, (10,3,2)][Floor 7, TO_DESTINATION, (8,1,4)]
+
+Total Wait Time:27
+Total Requests:5
+Average waiting time: 5.40
+
+
+输入参数：p=0.7     楼层：24      电梯数：4       时间：20；
+Welcome to the Elevator simulator!
+case 2:
+Please enter the probability of arrival for Requests: 0.7
+Please enter the number of floors: 24
+Please enter the number of elevators: 4
+Please enter the length of the simulation (in time units): 20
+
+Total Wait Time:29
+Total Requests:4
+Average waiting time: 7.25 
+
+
+输入参数：2
+Welcome to the Elevator simulator!
+Please enter the probability of arrival for Requests: 2
+parameter error
+
+输入参数：-0.5
+Welcome to the Elevator simulator!
+Please enter the probability of arrival for Requests: -0。5
+parameter error
+Welcome to the Elevator simulator!
+Please enter the probability of arrival for Requests: 
+(p值不在0-1，参数错误)
+
+二、特殊情况示例(普通程序，非优化程序，【】内容为重点):
+Welcome to the Elevator simulator!
+case 1：
+Please enter the probability of arrival for Requests: 0.99
+Please enter the number of floors: 10
+Please enter the number of elevators: 100
+Please enter the length of the simulation (in time units): 100
+
+
+Total Wait Time:343
+Total Requests:97
+Average waiting time: 3.54 
+
+※【expected result: average wait time should be <10, but not 0】
+
+
+Welcome to the Elevator simulator!
+case 2：
+Please enter the probability of arrival for Requests: 0.99
+Please enter the number of floors: 100
+Please enter the number of elevators: 100
+Please enter the length of the simulation (in time units): 100
+
+
+Total Wait Time:1863
+Total Requests:48
+Average waiting time: 38.81 
+
+※【average wait time should be<100, and bigger than case1】
+
+
+Welcome to the Elevator simulator!
+case 3：
+Please enter the probability of arrival for Requests: 0.01
+Please enter the number of floors: 2
+Please enter the number of elevators: 1
+Please enter the length of the simulation (in time units): 1000
+
+Total Wait Time:5
+Total Requests:8
+Average waiting time: 0.63 
+
+※ 【the number of requests should be very closed to 0】
+
+
+
+Welcome to the Elevator simulator!
+case 4：
+Please enter the probability of arrival for Requests: 0.5
+Please enter the number of floors: 2
+Please enter the number of elevators: 1000
+Please enter the length of the simulation (in time units): 1000
+
+Total Wait Time:236
+Total Requests:481
+Average waiting time: 0.49 
+
+※【the number of requests should be around 500】
+
+
