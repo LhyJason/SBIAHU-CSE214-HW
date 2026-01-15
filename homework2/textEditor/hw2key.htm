@@ -1,0 +1,99 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Microsoft Theme" content="none, default">
+   <meta name="Microsoft Border" content="none, default">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; SunOS 5.6 sun4u) [Netscape]">
+   <title>CSE214 Homework 2 Grading Key</title>
+</head>
+<body style="margin:2em" bgcolor="#FFFFFF">
+
+<center>
+<h2>
+<img SRC="http://www.cs.sunysb.edu/~cse214/images/logo.gif" BORDER=0 height=100 width=200>&nbsp;<br>
+<font face="Arial"><font color="#808000">HOMEWORK - SPRING 2023</font></font></h2></center>
+
+<hr>
+<h3><b><font face="Arial">Programming Assignment 2 -&nbsp; GRADING KEY</font></b></h3>
+
+<p>
+<b>1.  (17 points) Documentation and coding style:</b>
+<ul>
+<li>Name, ID number and recitation at the top of ALL java files [2 points]</li>
+<li>         Precise and correct specifications [5 points]</li>
+<li>         Indentation [3 points]</li>
+<li>         Variable names [2 points]</li>
+<li>         javadoc format documentation * (see NOTE) [5 points]</li>
+
+<p><span class="c2">NOTE 1: Only submit java files. We will use the javadoc *.java command to create the javadoc files.</span> <br>
+   <span style="color:red"  class="c2">NOTE 2: YOUR ASSIGNMENT WILL NOT BE GRADED if you submit only *.class files.</span> <br>
+   <span style="color:red"  class="c2">NOTE 3: YOUR ASSIGNMENT WILL NOT BE GRADED if you use ArrayList, Vector, LinkedList or any predefined Java API Data Structures.</span></p><p class="c5"><span class="c2"></span></p>
+
+
+</ul>
+
+<b>2.  (18 points) Source code:</b>
+<ul><li>         Implementation done as specified (additional methods are OK) [10 points]
+<li>         Throw an exception back to the calling method(s) if a precondition is violated. [8 points]</li></ul>
+
+<b>2.  (60 points) Program correctness:</b>
+<ul><li>         Compiles without error (no partial credit) [9 points]
+<li>         All specified methods work correctly:</li>
+<ul><li> Insert when list is empty, insert before head, insert before 
+tail, and insert before other nodes. [7 points]
+<li>     Append when list is empty or if list has at least one node. 
+[7 points]</li> 
+<li>     Remove cursor node when cursor is head, tail, or any other node. [7 points] </li>
+<li>     Print current line or a given range of lines. [7 points]</li>
+<li>     Move forward and print the next line. Also, test for end of list and print a message, if necessary. [3 points] </li>
+<li>     Move backward and print the last line. Also, test for beginning of the list and print a message, if necessary. [3 points]</li>
+<li>     Line numbers are printed correctly during insert, append and print. [3 points]</li>
+<li>     Print a message if an invalid option or invalid number is entered. [3 points]
+<li>     Print the help menu. [3 points]
+<li>     Print a message if user enters invalid line range. [3 points]
+<li>     Options are NOT case sensitive (lower case or upper case are the same). [3 points]
+<li>     If text is modified or a new line is inserted, confirm before terminating program. [2 points]
+</ul>
+</li></ul>
+
+<b>3.  (5 points) Program efficiency: </b> The efficiency of all methods should not exceed O(n). <br>
+<p style="margin-left:0em;margin-right:13em"><b><i>Note: To print a list, cursorLineNo must be called only once and its value  be assigned to a local counter. Then, after each line is printed, the counter should be incremented by one. This avoids multiple calls to cursorLineNo for printing a given range of lines.</i></b></p>
+</b>
+
+<!--p>
+<font color=red><b>4. (22 points) Extra credit:</b></font>
+ <ul><li> The best program in class receives <font color=red>up to 6 </font>extra points and will be posted as the sample answer.
+            (The author may remove his/her name before posting the program)</li>
+<li>When the program starts, get a filename from Java command line, which is stored in args[0]. Then read the text file, one line at a time, and create a list of lines and allow the user to modify the given text. 
+If the file doesn't exist, create an empty list and start a new session.
+Also, include the following option: <font color="red">[16 points]</font>
+
+<ul>
+  <li><b>S <br>
+    Save the text with the same filename given in args[0], and quit the editor. This should overwrite the file if it already exists. You may rename the existing file before overwriting it (renaming is NOT required). </b></li>
+</ul>
+The input filename is given after the program name and it is stored in args[0]. In the following example, args[0] contains "anyFileName" after program is executed. 
+<blockquote><pre> java  yourProgramName  anyFileName</pre></blockquote>
+<p><i><font color="red">Note: You may ask the user to enter the filename rather than using Java command line (args[0]). In this case, you will receive up to 13 points for the optional part.  </font></i></p>
+</ul>            
+
+</p-->
+
+<hr>
+
+
+<p align=center style='text-align:center;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:Arial;color:maroon'><a
+href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">Course Info</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/schedule.htm">Schedule</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/sections.htm">Sections</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/announcements.htm">Announcements</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/homework.htm">Homework</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/exams.htm">Exams</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/help.htm">Help/FAQ</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/grades.htm">Grades</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/index.html">HOME</a> </span></strong></p>
+
+</body>
+</html>

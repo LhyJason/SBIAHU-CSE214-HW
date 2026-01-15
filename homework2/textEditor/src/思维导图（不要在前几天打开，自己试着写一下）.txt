@@ -1,0 +1,40 @@
+Line Editor
+
+LineNode
+
+previous: LineNode
+next: LineNode
+line: String
+LineNode()：构造函数
+setLine(line: String)：设置 line 属性
+getLine(): String：获取 line 属性
+setNext(node: LineNode)：设置 next 属性
+setPrev(node: LineNode)：设置 previous 属性
+getNext(): LineNode：获取 next 属性
+getPrev(): LineNode：获取 previous 属性
+
+
+
+
+LineList
+
+head: LineNode
+tail: LineNode
+cursor: LineNode
+LineList()：构造函数
+insertBeforeCursor(line: String): boolean：在光标之前插入行
+append(line: String)：在列表的末尾附加行
+removeCursor(): boolean：删除光标所在的行
+nextLine(): String：将光标移到下一行并返回该行的内容
+previousLine(): String：将光标移到上一行并返回该行的内容
+cursorLineNo(): int：返回光标在列表中的位置
+printCursor(): void：打印光标所在行的内容和行号
+printList(startingLine: int, endingLine: int): LineNode：打印从 startingLine 到 endingLine 的所有行
+
+
+
+
+Editor
+
+lineList: LineList
+main(args: String[]): void：程序入口，解析用户输入并执行相应的操作

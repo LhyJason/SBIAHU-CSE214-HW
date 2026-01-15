@@ -1,0 +1,74 @@
+h
+    A   Append one or more lines at the end of file. 
+    I   Insert one or more lines before the current line. 
+    H   Help. 
+    L   List one or more lines. 
+    P   Move to the previous line. 
+    N   Move to the next line. 
+    Q   Quit. 
+    R   Remove the current line. 
+a 5
+    1*Cause you were Romeo I was a scarlet letter
+    2*And my daddy said, "Stay away from Juliet"	
+    3*I'll be waiting, all there's left to do is run
+    4*You'll be the prince
+    5*and I'll be the princess    
+L    1      2//中间有多个空格应当也能够正常读取
+    1*Cause you were Romeo I was a scarlet letter
+    2*And my daddy said, "Stay away from Juliet"
+r 
+I 1
+    2*Romeo take me somewhere we can be alone
+P
+    2*Romeo take me somewhere we can be alone
+P
+    1*Cause you were Romeo I was a scarlet letter
+p    
+** Top of file reached ** 
+r
+L 1 99
+    1*Romeo take me somewhere we can be alone
+    2*I'll be waiting, all there's left to do is run
+    3*You'll be the prince
+    4*and I'll be the princess
+N
+    ** End of file reached **
+a 2
+    5*It's a love story
+    6*baby just say yes
+L  20  1  
+    ** Invalid Line Range ** 
+L 1 99
+    1*Romeo take me somewhere we can be alone
+    2*I'll be waiting, all there's left to do is run
+    3*You'll be the prince
+    4*and I'll be the princess
+    5*It's a love story
+    6*baby just say yes
+p
+    5*It's a love story
+n
+    6*baby just say yes
+A  4
+    7*Marry me, Juliet, you'll never have to be alone
+    8*I love you, and that's all I really know
+    9*I talked to your dad, go pick out a white dress
+    10*It's a love story, baby, just say yes
+B
+    ** Invalid Option **
+s
+    ** Invalid Option **
+L 1 99
+    1*Romeo take me somewhere we can be alone
+    2*I'll be waiting, all there's left to do is run
+    3*You'll be the prince
+    4*and I'll be the princess
+    5*It's a love story
+    6*baby just say yes
+    7*Marry me, Juliet, you'll never have to be alone
+    8*I love you, and that's all I really know
+    9*I talked to your dad, go pick out a white dress
+    10*It's a love story, baby, just say yes
+q
+    Are you sure?  y
+    Good Bye. 

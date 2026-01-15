@@ -1,0 +1,319 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="Microsoft Theme" content="none, default">
+<meta name="Microsoft Border" content="none, default">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>CSE214 Homework 2</title>
+</head>
+
+<body style="margin:2em" bgcolor="#FFFFFF">
+
+<h2 align="center"><img border="0" src="http://www.cs.sunysb.edu/~cse214/images/logo.gif" width="200" height="100">&nbsp; <font
+color="#800080"><br>
+</font><font color="#808000" face="Arial">HOMEWORK - SPRING 2023</font></h2>
+
+<hr>
+
+<h3><font face="Arial"><strong>Programming Assignment 2 - due Friday, April 7th by 7PM (China time) </strong></font></h3>
+
+
+<ul style="margin-top:0in" type="disc">
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Be sure your code follows the <a href="http://www.cs.sunysb.edu/~cse214/codingstyle.htm">coding style</a>
+     for CSE214. </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Make sure you read the warnings
+     about <a href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">academic
+     dishonesty</a>. <i>Remember, all work you submit for homework assignments
+     MUST be entirely your own work. Also, group efforts are not allowed.</i> </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">Login to your <a href="http://facdev04.cs.stonybrook.edu:8080/grade.Login">grading account</a>
+     and click "Submit Assignment" to upload and submit your
+     assignment. </span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;;color:red">You are not allowed
+     to any other predefined Java API Data Structure classes such as LinkedList, ArrayList, Vector  to
+     implement this assignment except where noted.</span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height:115%;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in"><b><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+     mso-fareast-font-family:&quot;Times New Roman&quot;">You may use Scanner,
+     InputStreamReader, or any other class that you wish for keyboard input.</span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+</ul>
+
+
+<p><b>
+A text editor is a utility program that lets a user to create, view, edit and store text files (or documents). This differs from a word processor in that
+the word processors often embed special control codes or escape sequences in the file to control formatting.
+Typically, a text editor provides special commands that allow the user to browse the text (e.g. moving forward or backward through the text), make changes in the text, save the
+text, and perform other actions. In line editors, such as </font><font face="Courier New">ed</font> on Unix or  </font><font face="Courier New">edlin</font> on Windows, user enters commands which apply to the current line or some range of lines, and the visual feedback is restricted to display of one or more lines, in contrast to a screen editor. </p></b>
+
+<p><b>
+In this assignment, you are required to implement a line editor with a limited set of options. 
+</p></b>
+
+<p><strong>1. Write a fully-documented class named LineNode that contains
+a line (String), and references to two other LineNodes
+(denoted &quot;previous&quot; and &quot;next&quot;). Your class will follow this
+general specification, but you have to fill in the
+details:</strong></p>
+<blockquote>
+ </font><font face="Courier New">  <p><strong>public class LineNode</strong></p> </font>
+</blockquote>
+<ul>
+  <li><strong>Constructor for LineNode<br>
+</font><font face="Courier New">public LineNode()<br> </font>
+    </strong></li>
+  <li><strong>setLine<br>
+</font><font face="Courier New">public void setLine(String line)<br> </font>
+    </strong></li>
+  <li><strong>getLine<br>
+</font><font face="Courier New">public String getLine()<br> </font>
+    </strong></li>    
+  <li><strong>setNext<br>
+</font><font face="Courier New">public void setNext(LineNode node)<br> </font>
+    </strong></li>
+  <li><strong>setPrev<br>
+</font><font face="Courier New">public void setPrev(LineNode node)<br> </font>
+    </strong></li>
+  <li><strong>getNext<br>
+</font><font face="Courier New">public LineNode getNext()<br> </font>
+    </strong></li>
+  <li><strong>getPrev<br>
+</font><font face="Courier New">public LineNode getPrev()<br> </font>
+    </strong></li>
+</ul>
+<p><strong>2. Write a fully-documented class named LineList that contains references to the <font face="Courier New">head,</font> <font face="Courier New">tail,</font> and <font face="Courier New">cursor</font> (current line) of a list of
+LineNode nodes. Your class will follow this specification, but you have to fill
+in the details:</strong></p>
+<blockquote>
+<font face="Courier New"><p><strong>public class LineList</strong></p></font>
+</blockquote>
+<ul>
+  <li><strong>Constructor for LineList<br>
+</font><font face="Courier New">public LineList()<br></font>
+    </strong></li>
+  <li><strong>insertBeforeCursor<br>
+</font><font face="Courier New">public boolean insertBeforeCursor(String line)<br></font>
+    Inserts the line before the cursor. This method should not change the cursor. The boolean return value indicates whether the insertion occurred or
+    not (if the list is empty, no insertion is made).&nbsp;
+     
+    </strong></li>
+  <li><strong>append<br>
+</font><font face="Courier New">public void append(String line)<br></font>
+    Appends the line at the end of the list, i.e. after the tail node. The cursor should be advanced to the new line, just appended. &nbsp;
+     
+    </strong></li>
+
+  <li><strong>removeCursor<br>
+</font><font face="Courier New">public boolean removeCursor()<br></font>
+    Removes the cursor node, if any.&nbsp;
+    The boolean return value indicates whether the removal occurred or not.<br>
+    </strong></li>
+
+  <li><strong>nextLine<br>
+</font><font face="Courier New">public String nextLine()<br></font>
+   Returns the line after cursor and advances cursor to next node. If cursor is referring to the tail node, return null. &nbsp;
+<br>
+    </strong></li>
+  <li><strong>previousLine<br>
+</font><font face="Courier New">public String previousLine()<br></font>
+Returns the line before cursor and moves cursor to previous node. If cursor is referring to head node, return null. &nbsp;
+<br>
+    </strong></li>
+
+    </strong></li>
+  <li><strong>cursorLineNo<br>
+</font><font face="Courier New">public int cursorLineNo()<br></font>
+    Returns the position of the cursor in the list, where head node is in position one. If cursor is null (list is empty), return zero.&nbsp;
+<br>
+<i>NOTE: Do not destroy the list as you do this.</i>
+    </strong></li>
+    </strong></li>
+  <li><strong>printCursor<br>
+</font><font face="Courier New">public void printCursor()<br></font>
+    Prints the line in cursor node, preceded by its line number. 
+<br>
+    </strong></li>
+
+
+  <li><strong>printList<br>
+</font><font face="Courier New">public LineNode printList(int startingLine, int endingLine)<br></font>
+    Prints the list from </font><font face="Courier New">startingLine </font> to </font><font face="Courier New">endingLine,</font> one node per line, where </font><font face="Courier New">startingLine </font> and </font><font face="Courier New">endingLine</font> are positions of respective nodes in the list (head node is in position one). In the output, each line must be preceded by its position (i.e. the line number). If <font face="Courier New"> startingLine</font> is greater than <font face="Courier New"> endingLine,</font> or if it doesn't exist, you must throw an exception to the calling program. If <font face="Courier New"> endingLine</font> exceeds number of nodes in the list, simply stop at the <font face="Courier New">tail</font> node. 
+
+<i>This method must set <font face="Courier New">cursor</font> to the reference of the last line printed and return the same reference as result. </i></font> &nbsp
+
+<br>
+<i>NOTE: Do not destroy the list as you do this.</i>
+    </strong></li>
+</ul>
+<p><strong>3. Write a fully-documented class named Editor. This class will contain a main method that receives a sequence of options from the keyboard and performs necessary action after each option is entered. Following is the list of valid options and required values, along with what to do if the user enters that option.</strong></p>
+<ul>
+
+  <li><b>A  &nbsp;&nbsp;&nbsp<font face="Courier New">&lt;number of lines></font> <br>
+    Appends one or more lines at the end of text. Prompt the user for the lines, one at the time, and append it to the end of text after each line is entered. Also, set the current line to the last line appended.  </b></li>
+
+  <li><b>H  <br>
+   Helps the user by displaying all valid options. <br>
+  </b></li>
+
+<li><b>I &nbsp;&nbsp;&nbsp <font face="Courier New">&lt;number of lines></font> <br>
+    Inserts one or more lines before the current line. You must prompt the user for the lines, one at the time, and after the user enters a string, insert it before the current line. The current line is not changed. </b></li>
+
+
+ 
+  <li><b>L  &nbsp;&nbsp;&nbsp<font face="Courier New">&lt;startingLine> &nbsp &lt;endingLine></font> <br>
+    Prints one or more lines of the text, from <font face="Courier New">startingLine</font> to <font face="Courier New">endingLine,</font> and each line is preceded by its line number. If <font face="Courier New">startingLine</font> is greater than <font face="Courier New">endingLine,</font> or if it doesn't exist, print an approapriate message and ignore the entry. If <font face="Courier New">endingLine</font> exceeds number of lines in the text, simply stop at the last line of the text. The current line should be set to the last line printed. This option can also be used to move the current line to a specific position. For example "L 3 3" prints the third line and sets the current line to that line.&nbsp;
+ <br></b>
+
+
+  <li><b>N<br>
+    Moves forward to the next line and prints that line. If current line is at the bottom of text, prints a message and ignores the entry.  &nbsp;
+ </li>
+
+ <li><b>P <br>
+    Moves backward to the previous line and prints that line. If current line is at the top of text, prints a message and ignores the entry.  &nbsp;
+ </li>
+
+
+  <li><b>R <br>
+    Removes the current line, if there's at least one line in the text, otherwise prints a message and ignores the entry. </b></li>
+
+
+  <li><b>Q <br>
+        If the text is modified or a new line is inserted, quit the program after user's confirmation; otherwise quit without a confirmation.</b></li>
+<br>
+</ul> 
+ 
+</ul>
+<p><b>4. Supply any exception handling class(es) that you need in addition to
+the classes above.</b></p>
+
+<i><font color=red><b>Note: You may include additional methods, if necessary.</font></i>
+
+
+<!--p><font color=red><u>Optional - Extra Credit (16 points)</u><br> </font></p>
+
+
+When the program starts, get a filename from Java command line, which is stored in args[0]. Then read the text file, one line at a time, and create a list of lines and allow the user to modify the given text. 
+If the file doesn't exist, create an empty list and start a new session.
+Also, include the following option:
+
+<ul>
+  <li><b>S <br>
+    Save the text with the same filename given in args[0], and quit the editor. This should overwrite the file if it already exists. You may rename the existing file before overwriting it (renaming is NOT required). </b></li>
+</ul>
+The input filename is given after the program name and it is stored in args[0]. In the following example, args[0] contains "anyFileName" after program is executed. 
+<blockquote><pre> java  yourProgramName  anyFileName</pre></blockquote>
+
+<p><i><font color="red">Note: You may ask the user to enter the filename rather than using Java command line (args[0]). In this case, you will receive up to 13 points for the optional part.  </font></i></p-->
+
+<p><strong><u>INPUT FORMAT</u></strong></p><ul>
+<p><strong><li>Each option and its required values are entered on one line and they are separated by at least one blank. The options are NOT case sensitive. For example n and N are the same.
+<li>If an invalid option is entered, print a message and ignore the entry.
+<li>If the user does not enter all required values on the line, print a message and ignore the entry.
+<li>If the user enters more than required values on the line, process the required values and ignore the extra values. 
+<li>You may assume that the entries are of the correct type, but you have to check the range if applicable. 
+
+For example <!--you may assume that the first non-blank character is a letter indicating the option,
+or --> if you're expecting to receive a line number, you may assume that an integer will be entered. 
+However you must test to make sure this is a valid line number.
+
+<li>Our test cases will not include lines longer than 60 characters.
+</ul></b></strong>
+
+<p><strong><u>SAMPLE EDITING SESSION</u></strong></p>
+<p><strong>Notes:<br>
+1. Prompts and other program outputs are shown in blue (the rest are user input). <br>
+2. Your output and prompts can vary in style (line numbers must be included).
+ &nbsp;</strong></p>
+
+<pre>
+
+<font color=blue>CSE214 Editor, Version 1.0, 03/11/22 </font>
+<font color=blue>> </font>h
+<font color=blue>    A   Append one or more lines at the end of file. </font>
+<font color=blue>    I   Insert one or more lines before the current line. </font>
+<font color=blue>    H   Help. </font>
+<font color=blue>    L   List one or more lines. </font>
+<font color=blue>    P   Move to the previous line. </font>
+<font color=blue>    N   Move to the next line. </font>
+<font color=blue>    Q   Quit. </font>
+<font color=blue>    R   Remove the current line. </font>
+<font color=blue>> </font>a 5
+    <font color=blue>1*</font>public void addAll(IntArrayBag addend) {
+    <font color=blue>2*</font>    ensureCapacity(manyItems + addend.manyItems);
+    <font color=blue>3*</font>    // I didn't enter the for loop. It's okay I'll add it later.
+    <font color=blue>4*</font>       add(addend.data[i]); 
+    <font color=blue>5*</font>}
+<font color=blue>> </font> L    3     3
+    <font color=blue>3*    // I didn't enter the for loop. It's okay I'll add it later. </font>
+<font color=blue>> </font>r 
+<font color=blue>> </font>I 1
+    <font color=blue>3*</font>    for(int i=0; i < addend.manyItems; i++) 
+<font color=blue>> </font> L 1 99
+    <font color=blue>1*public void addAll(IntArrayBag addend) { </font>
+    <font color=blue>2*    ensureCapacity(manyItems + addend.manyItems); </font>
+    <font color=blue>3*    for(int i=0; i < addend.manyItems; i++)  </font>
+    <font color=blue>4*       add(addend.data[i]);  </font>
+    <font color=blue>5*} </font>
+<font color=blue>> </font>L 1      1
+    <font color=blue>1*public void addAll(IntArrayBag addend) { </font>
+<font color=blue>> </font>P
+    <font color=blue>** Top of file reached ** </font>
+<font color=blue>> </font>i 3
+    <font color=blue>1* </font>//
+    <font color=blue>2* </font>// This method doesn't work correctly if addend is the same as this IntArrayBag.
+    <font color=blue>3* </font>// 
+<font color=blue>> </font>L  9  1  
+    <font color=blue>** Invalid Line Range ** </font>
+<font color=blue>> </font>L 1 99  // extra values must be ignored
+    <font color=blue>1*// </font>
+    <font color=blue>2*// This method doesn't work correctly if addend is the same as this IntArrayBag. </font>
+    <font color=blue>3*//  </font>
+    <font color=blue>4*public void addAll(IntArrayBag addend) { </font>
+    <font color=blue>5*    ensureCapacity(manyItems + addend.manyItems); </font>
+    <font color=blue>6*    for(int i=0; i < addend.manyItems; i++)  </font>
+    <font color=blue>7*       add(addend.data[i]);  </font>
+    <font color=blue>8*} </font>
+<font color=blue>> </font>N
+    <font color=blue>** End of file reached **</font>
+<font color=blue>> </font>p
+    <font color=blue>7*       add(addend.data[i]);  </font>
+<font color=blue>> </font>p    ignore this .... 
+    <font color=blue>6*    for(int i=0; i < addend.manyItems; i++)  </font>
+<font color=blue>> </font>n
+    <font color=blue>7*       add(addend.data[i]); </font>
+<font color=blue>> </font>T
+    <font color=blue>** Invalid Option **</font>
+<font color=blue>> </font>q
+<font color=blue>Are you sure? </font> y
+<font color=blue>Good Bye. </font>
+
+</b></pre>
+
+
+<hr>
+
+
+<p align=center style='text-align:center;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:Arial;color:maroon'><a
+href="http://www.cs.sunysb.edu/~cse214/courseinfo.htm">Course Info</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/schedule.htm">Schedule</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/sections.htm">Sections</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/announcements.htm">Announcements</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/homework.htm">Homework</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/exams.htm">Exams</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/help.htm">Help/FAQ</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/grades.htm">Grades</a> | <a
+href="http://www.cs.sunysb.edu/~cse214/index.html">HOME</a> </span></strong></p>
+
+</body>
+</html>
